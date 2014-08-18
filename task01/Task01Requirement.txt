@@ -1,0 +1,40 @@
+We need three style changes in the web page provided for this task.
+
+1. The navigation menu which has names 
+
+        Product Development DNA
+        Technology Focus
+        Technology Partners
+        About Persistent
+		
+	should be given style of { font-size: 20px; }
+	
+2. The client name Dave shall be given style {font-size: 22px;}
+
+3. The client designation shall be given style of { font-size: 26px; }	
+
+4. The styles shall be applied by a <style> tag placed in the <head> section of the page.  You shall use contextual CSS selectors to achieve this.  For example when we want to apply style to some A tag which is inside DIV having class "normal" we make a selector like 
+
+div.normal a { <awesone style here> }
+
+5. Fork the repository https://github.com/tusharvjoshi/frontendninja in your account using the Fork button on that repository.
+
+6. Clone the repository frontendninja which will be in your account
+
+7. Make a folder named final in the task02 folder and add copy all the files in task02 to the final folder.   The final folder shall look like frontendninja/task02/final
+
+8. Make the changes to the files in final folder and commit them to your own repository.
+
+9. Command sequence:
+
+cd myprojects
+git clone https://github.com/tusharvjoshi/frontendninja
+cd frontendninja\task02
+mkdir final
+<Copy all files of task02 to final folder>
+cd final
+<make your awesome changes according to requiements>
+cd .. 
+git add final
+git commit -m "Adding final files to task02"
+git push
