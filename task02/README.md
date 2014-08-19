@@ -83,7 +83,7 @@
 
   Check created package.json file and it shall look like below:  
 
-	<code>
+   <pre><code>
    {
       "name": "npmtest",
       "version": "0.0.0",
@@ -103,7 +103,7 @@
       },
       "homepage": "https://github.com/tushardemo/frontendninja"
    }
-   </code>
+   </code></pre>
 
   - Create spec folder  
   mkdir spec  
