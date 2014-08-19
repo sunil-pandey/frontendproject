@@ -1,14 +1,30 @@
 20 August 2014, Task 02 Requirements
 ====================================
 ## 1. Review of forking, cloning and committing repository.
+  1. Go to https://github.com/sunil-pandey/frontendproject
+  2. Login to Git
+  3. Click on Fork
+  4. Go to https://github.com/sunilypandey ((sunilypandey is demo participants for demo purposes))
+  5. See the forked folder has been copied here
+  6. Go to frontendproject
+  7. Copy the URL to clipboard
+  8. Open a command window and go to the folder when the git repository is to be cloned.
+  9. git clone <URL from clipboard>
+  10. Create final folder.
+  11. Inside final folder, create a file of zero size (touch a file).
+  12. git add final
+  13. git commit -m "final folder created"
+  14. git push
+  15. Refresh page in browser
+  16. See that final folder is added
 
 ## 2. Features of README.md
 
 ## 3. Make the original repository upstream remote for your local
 
   cd projects  
-  git clone https://github.com/sunildemo/frontendproject  
-  (sunildemo is demo participants for demo purposes)  
+  git clone https://github.com/sunilypandey/frontendproject  
+  (sunilypandey is demo participants for demo purposes)  
   cd frontendproject  
 
   One time setting:  
