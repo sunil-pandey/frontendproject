@@ -83,25 +83,27 @@
 
   Check created package.json file and it shall look like below:  
 
-   {  
-      "name": "npmtest",  
-      "version": "0.0.0",  
-      "description": "first npm init",  
-      "main": "index.js",  
-      "scripts": {  
-         "test": "echo \"Error: no test specified\" && exit 1"  
-      },  
-      "repository": {  
-         "type": "git",  
-         "url": "https://github.com/tushardemo/frontendninja"  
-      },  
-      "author": "'Tushar",  
-      "license": "MIT",  
-      "bugs": {  
-         "url": "https://github.com/tushardemo/frontendninja/issues"  
-      },  
-      "homepage": "https://github.com/tushardemo/frontendninja"  
-   }  
+	<code>
+   {
+      "name": "npmtest",
+      "version": "0.0.0",
+      "description": "first npm init",
+      "main": "index.js",
+      "scripts": {
+         "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "repository": {
+         "type": "git",
+         "url": "https://github.com/tushardemo/frontendninja"
+      },
+      "author": "'Tushar",
+      "license": "MIT",
+      "bugs": {
+         "url": "https://github.com/tushardemo/frontendninja/issues"
+      },
+      "homepage": "https://github.com/tushardemo/frontendninja"
+   }
+   </code>
 
   - Create spec folder  
   mkdir spec  
