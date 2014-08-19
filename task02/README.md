@@ -22,10 +22,7 @@
 
 ## 3. Make the original repository upstream remote for your local
 
-  cd projects  
-  git clone https://github.com/sunilypandey/frontendproject  
-  (sunilypandey is demo participants for demo purposes)  
-  cd frontendproject  
+  Go to frontendproject  
 
   One time setting:  
   cd frontendproject  
