@@ -71,15 +71,15 @@
   mkdir npmtest  
   cd npmtest  
   npm init  
-  > name: (npmtest): ENTER  
-  > version: (0.0.0) ENTER  
-  > description: first npm init ENTER  
-  > entry point: (index.js) ENTER  
-  > test command: ENTER  
-  > git repository: https://github.com/tushardemo/frontendninja ENTER  
-  > keywords: ENTER  
-  > license: (ISC) MIT ENTER  
-  > Is this ok? (yes) ENTER  
+  &gt; name: (npmtest): ENTER  
+  &gt; version: (0.0.0) ENTER  
+  &gt; description: first npm init ENTER  
+  &gt; entry point: (index.js) ENTER  
+  &gt; test command: ENTER  
+  &gt; git repository: https://github.com/tushardemo/frontendninja ENTER  
+  &gt; keywords: ENTER  
+  &gt; license: (ISC) MIT ENTER  
+  &gt; Is this ok? (yes) ENTER  
 
   Check created package.json file and it shall look like below:  
 
