@@ -4,7 +4,7 @@
   1. Go to https://github.com/sunil-pandey/frontendproject
   2. Login to Git
   3. Click on Fork
-  4. Go to https://github.com/sunilypandey ((sunilypandey is demo participants for demo purposes))
+  4. Go to https://github.com/sunilypandey (sunilypandey is demo participants for demo purposes)
   5. See the forked folder has been copied here
   6. Go to frontendproject
   7. Copy the URL to clipboard
