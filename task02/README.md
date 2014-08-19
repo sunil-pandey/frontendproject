@@ -4,15 +4,15 @@
 ## 1. Make the original repository upstream remote for your local
 
   cd projects  
-  git clone https://github.com/tushardemo/frontendninja  
-  (tushardemo is demo participants for demo purposes)  
-  cd frontendninja  
+  git clone https://github.com/sunildemo/frontendproject  
+  (sunildemo is demo participants for demo purposes)  
+  cd frontendproject  
 
   One time setting:  
-  cd frontendninja  
-  git remote add upstream https://github.com/tusharvjoshi/frontendninja  
+  cd frontendproject  
+  git remote add upstream https://github.com/sunil-pandey/frontendproject  
 
-  To get updates from the source repository of tusharvjoshi  
+  To get updates from the source repository of sunil-pandey  
   git fetch upstream  
   git merge upstream/master master  
   git push  
@@ -83,25 +83,25 @@
 
   Check created package.json file and it shall look like below:  
 
-  {  
-    "name": "npmtest",  
-    "version": "0.0.0",  
-    "description": "first npm init",  
-    "main": "index.js",  
-    "scripts": {  
-      "test": "echo \"Error: no test specified\" && exit 1"  
-    },  
-    "repository": {  
-      "type": "git",  
-      "url": "https://github.com/tushardemo/frontendninja"  
-    },  
-    "author": "'Tushar",  
-    "license": "MIT",  
-    "bugs": {  
-      "url": "https://github.com/tushardemo/frontendninja/issues"  
-    },  
-    "homepage": "https://github.com/tushardemo/frontendninja"  
-  }  
+  > {  
+  >>  "name": "npmtest",  
+  >>  "version": "0.0.0",  
+  >>  "description": "first npm init",  
+  >>  "main": "index.js",  
+  >>  "scripts": {  
+  >>>    "test": "echo \"Error: no test specified\" && exit 1"  
+  >>  },  
+  >>  "repository": {  
+  >>>    "type": "git",  
+  >>>    "url": "https://github.com/tushardemo/frontendninja"  
+  >>  },  
+  >>  "author": "'Tushar",  
+  >>  "license": "MIT",  
+  >>  "bugs": {  
+  >>>    "url": "https://github.com/tushardemo/frontendninja/issues"  
+  >>  },  
+  >>  "homepage": "https://github.com/tushardemo/frontendninja"  
+  > }  
 
   - Create spec folder  
   mkdir spec  
