@@ -76,7 +76,7 @@
   &gt; description: first npm init ENTER  
   &gt; entry point: (index.js) ENTER  
   &gt; test command: ENTER  
-  &gt; git repository: https://github.com/tushardemo/frontendninja ENTER  
+  &gt; git repository: https://github.com/sunil-pandey/frontendproject ENTER  
   &gt; keywords: ENTER  
   &gt; license: (ISC) MIT ENTER  
   &gt; Is this ok? (yes) ENTER  
@@ -94,14 +94,14 @@
       },
       "repository": {
          "type": "git",
-         "url": "https://github.com/tushardemo/frontendninja"
+         "url": "https://github.com/sunil-pandey/frontendproject"
       },
       "author": "'Tushar",
       "license": "MIT",
       "bugs": {
-         "url": "https://github.com/tushardemo/frontendninja/issues"
+         "url": "https://github.com/sunil-pandey/frontendproject/issues"
       },
-      "homepage": "https://github.com/tushardemo/frontendninja"
+      "homepage": "https://github.com/sunil-pandey/frontendproject"
    }
    </code></pre>
 
