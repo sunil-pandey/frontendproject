@@ -109,11 +109,13 @@
   mkdir spec  
   - Create test.js file in spec folder with the following content:  
 
+  <pre><code>
   describe("A suite", function() {  
     it("contains spec with an expectation", function() {  
       expect(true).toBe(true);  
     });  
-  });  
+  });
+  </code></pre>
 
   - Install gulp globally  
   npm install -g gulp  
