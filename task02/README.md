@@ -1,5 +1,5 @@
-23 July 2014, Task 03 Requirements
-==================================
+20 August 2014, Task 02 Requirements
+====================================
 
 1) Make the original repository upstream remote for your local
 
@@ -30,7 +30,9 @@ Use desktop columns that is col-md-* classes
 Check with CTRL+SHIFT+M in Firefox
 
 `+--------------------------------------------------------+
+
 `|  Banner                                                |
+
 `+--------------------------------------------------------+
 `+-------------+-----------------------------+------------+
 `| Left Bar    |  Main content               | right bar  |
