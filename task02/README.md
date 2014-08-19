@@ -1,7 +1,10 @@
 20 August 2014, Task 02 Requirements
 ====================================
+## 1. Review of forking, cloning and committing repository.
 
-## 1. Make the original repository upstream remote for your local
+## 2. Features of README.md
+
+## 3. Make the original repository upstream remote for your local
 
   cd projects  
   git clone https://github.com/sunildemo/frontendproject  
@@ -17,7 +20,7 @@
   git merge upstream/master master  
   git push  
 
-## 2. Use bootstrap 3 and make grid layout
+## 4. Use bootstrap 3 and make grid layout
 
   Understand the working of Bootstrap 3 grids  
   http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works  
@@ -66,7 +69,7 @@
 
   Commit your index.html back to your repository.  
 
-## 3. Getting familiar with npm
+## 5. Getting familiar with npm
 
   mkdir npmtest  
   cd npmtest  
