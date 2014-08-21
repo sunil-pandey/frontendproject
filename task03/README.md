@@ -40,7 +40,7 @@ Workflow for a web application development
   <pre><code>
   ----------
 ####  index.html
-  ----------
+  ==========
 
   &lt;!doctype html&gt;
   &lt;html lang=&quot;en&quot;&gt;
