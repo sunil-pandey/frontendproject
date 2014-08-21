@@ -45,9 +45,9 @@ Workflow for a web application development
   &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
 
-    <meta charset=&quot;UTF-8&quot;>
+    <meta charset="UTF-8">
     <title>Workflow</title>
-    <link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot; >
+    <link rel="stylesheet" href="css/style.css" >
   &lt;/head&gt;
   &lt;body&gt;
   &lt;h1&gt;Change Next&lt;/h1&gt;
