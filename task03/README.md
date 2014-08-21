@@ -39,8 +39,7 @@ Workflow for a web application development
 
   <pre><code>
   ----------
-####  index.html
-  ==========
+####  <U>index.html</U>
 
   &lt;!doctype html&gt;
   &lt;html lang=&quot;en&quot;&gt;
@@ -58,8 +57,7 @@ Workflow for a web application development
   &lt;/body&gt;
   &lt;/html&gt;
   ----------
-####  main.less
-  ----------
+####  <U>main.less</U>
 
   @primary-color: #e1b283
 
@@ -68,8 +66,7 @@ Workflow for a web application development
   }
 
   ----------
-####  script.coffee
-  -------------
+####  <U>script.coffee</U>
 
   process = -&gt;
   	&quot;Hello There. Same here&quot;
@@ -78,8 +75,7 @@ Workflow for a web application development
   	$(&apos;h1&apos;).append(&apos;Hello There&apos;)
 	
   ----------
-####  gulpfile.js
-  -----------
+####  <U>gulpfile.js</U>
 
   var gulp = require(&apos;gulp&apos;),
   	gutil = require(&apos;gulp-util&apos;),
