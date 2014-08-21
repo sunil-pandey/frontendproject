@@ -16,7 +16,7 @@ Workflow for a web application development
   - npm install --save-dev gulp-livereload
   - npm install --save-dev tiny-lr
 
-## 2. Make folder structure like follows
+## 2. Make folder structure as shown below
 
   <pre><code>
   components
@@ -37,7 +37,7 @@ Workflow for a web application development
 
 ##3. Watch the recording and create the contents of the files.  The content kept below will help you complete the files.
 
-  <pre><code>
+  <pre><code><xmp>
   index.html
   ----------
 
@@ -139,7 +139,7 @@ gulp.task('watch', function() {
   });
 
   gulp.task('default', ['less', 'js', 'coffee', 'watch']);
-  </code></pre>
+  </xmp></code></pre>
   
 ## 4. Watch the presentations for LESS and CoffeeScript
 
