@@ -37,25 +37,25 @@ Workflow for a web application development
 
 ##3. Watch the recording and create the contents of the files.  The content kept below will help you complete the files.
 
-  <pre><code><xmp>
+  <pre><code>
   index.html
   ----------
 
-  <!doctype html>
-  <html lang="en">
-  <head>
+  &lt;!doctype html&gt;
+  &lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
 
-    <meta charset="UTF-8">
-    <title>Workflow</title>
-    <link rel="stylesheet" href="css/style.css" >
-  </head>
-  <body>
-  <h1>Change Next</h1>
-  <p>Lorem ipsum</p>
-  <script src="js/script.js"></script>
-  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-  </body>
-  </html>
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Workflow&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot; &gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;h1&gt;Change Next&lt;/h1&gt;
+  &lt;p&gt;Lorem ipsum&lt;/p&gt;
+  &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;document.write(&apos;&lt;script src=&quot;http://&apos; + (location.host || &apos;localhost&apos;).split(&apos;:&apos;)[0] + &apos;:35729/livereload.js?snipver=1&quot;&gt;&lt;/&apos; + &apos;script&gt;&apos;)&lt;/script&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
 
   main.less
   ----------
@@ -70,76 +70,76 @@ Workflow for a web application development
   script.coffee
   -------------
 
-  process = ->
-  	"Hello There. Same here"
+  process = -&gt;
+  	&quot;Hello There. Same here&quot;
 	
-  $ ->
-  	$('h1').append('Hello There')
+  $ -&gt;
+  	$(&apos;h1&apos;).append(&apos;Hello There&apos;)
 	
 
   gulpfile.js
   -----------
 
-  var gulp = require('gulp'),
-  	gutil = require('gulp-util'),
-  	uglify = require('gulp-uglify'),
-  	less = require('gulp-less'),
-  	coffee = require('gulp-coffee'),
-  	concat = require('gulp-concat'),
-  	path = require('path'),
-  	livereload = require('gulp-livereload'),
-  	lr = require('tiny-lr'),
+  var gulp = require(&apos;gulp&apos;),
+  	gutil = require(&apos;gulp-util&apos;),
+  	uglify = require(&apos;gulp-uglify&apos;),
+  	less = require(&apos;gulp-less&apos;),
+  	coffee = require(&apos;gulp-coffee&apos;),
+  	concat = require(&apos;gulp-concat&apos;),
+  	path = require(&apos;path&apos;),
+  	livereload = require(&apos;gulp-livereload&apos;),
+  	lr = require(&apos;tiny-lr&apos;),
   	server = lr();
 
   var coffeeSources = [
-  	'components/coffee/*.coffee'
+  	&apos;components/coffee/*.coffee&apos;
   ];
 	
   var jsSources = [
-  	'components/lib/jquery.js',
-  	'components/scripts/*.js'
+  	&apos;components/lib/jquery.js&apos;,
+  	&apos;components/scripts/*.js&apos;
   ];
 
   var lessSources = [
-  	'components/less/*.less'
+  	&apos;components/less/*.less&apos;
   ];
 
-  gulp.task('coffee', function() {
+  gulp.task(&apos;coffee&apos;, function() {
   	gulp.src(coffeeSources)
   		.pipe(coffee({ bare: true})
-  			.on( 'error', gutil.log))
-  		.pipe(gulp.dest('components/scripts'));
+  			.on( &apos;error&apos;, gutil.log))
+  		.pipe(gulp.dest(&apos;components/scripts&apos;));
   });
 
-  gulp.task('js', function() {
+  gulp.task(&apos;js&apos;, function() {
   	gulp.src(jsSources)
   		.pipe(uglify())
-  		.pipe(concat('script.js'))
-  		.pipe(gulp.dest('js'))
+  		.pipe(concat(&apos;script.js&apos;))
+  		.pipe(gulp.dest(&apos;js&apos;))
   });
 
-  gulp.task('less', function () {
+  gulp.task(&apos;less&apos;, function () {
   	gulp.src(lessSources)
   		.pipe(less({
-  			paths: [ path.join(__dirname, 'components/less')]
+  			paths: [ path.join(__dirname, &apos;components/less&apos;)]
   		}))
-  		.pipe(concat('style.css'))
-  		.pipe(gulp.dest('css'))
+  		.pipe(concat(&apos;style.css&apos;))
+  		.pipe(gulp.dest(&apos;css&apos;))
   		.pipe(livereload());
   });
 
-gulp.task('watch', function() {
+gulp.task(&apos;watch&apos;, function() {
 	var server = livereload();
-    gulp.watch(jsSources, ['js']);
-    gulp.watch(coffeeSources, ['coffee']);
-    gulp.watch(lessSources, ['less']);
-    gulp.watch(['js/script.js', '*.html'], function(e) {
+    gulp.watch(jsSources, [&apos;js&apos;]);
+    gulp.watch(coffeeSources, [&apos;coffee&apos;]);
+    gulp.watch(lessSources, [&apos;less&apos;]);
+    gulp.watch([&apos;js/script.js&apos;, &apos;*.html&apos;], function(e) {
       server.changed(e.path);
     });
   });
 
-  gulp.task('default', ['less', 'js', 'coffee', 'watch']);
-  </xmp></code></pre>
+  gulp.task(&apos;default&apos;, [&apos;less&apos;, &apos;js&apos;, &apos;coffee&apos;, &apos;watch&apos;]);
+  </code></pre>
   
 ## 4. Watch the presentations for LESS and CoffeeScript
 
