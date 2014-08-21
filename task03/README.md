@@ -1,9 +1,9 @@
-25 July 2014 - Task 04
-======================
+22 August 2014 - Task 03
+========================
 
 Workflow for a web application development
 
-1) create a new project in task04 folder using the following commands
+## 1. create a new project in task04 folder using the following commands
 
 - npm init
 - npm install --save-dev gulp
@@ -16,7 +16,7 @@ Workflow for a web application development
 - npm install --save-dev gulp-livereload
 - npm install --save-dev tiny-lr
 
-2) Make folder structure like follows
+## 2. Make folder structure like follows
 
 components
   coffee
@@ -34,7 +34,7 @@ package.json
 gulpfile.js
 
 
-3) Watch the recording and create the contents of the files.  The content kept below will help you complete the files.
+##3. Watch the recording and create the contents of the files.  The content kept below will help you complete the files.
 
 index.html
 ----------
@@ -138,7 +138,7 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['less', 'js', 'coffee', 'watch']);
 
-4) Watch the presentations for LESS and CoffeeScript
+## 4. Watch the presentations for LESS and CoffeeScript
 
 LESS 
 Website
