@@ -38,7 +38,6 @@ Workflow for a web application development
 ##3. Watch the recording and create the contents of the files.  The content kept below will help you complete the files.
 
   <pre><code>
-  ----------
 #### index.html
 
   &lt;!doctype html&gt;
