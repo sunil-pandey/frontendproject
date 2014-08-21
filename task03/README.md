@@ -38,7 +38,7 @@ Workflow for a web application development
 ##3. Watch the recording and create the contents of the files.  The content kept below will help you complete the files.
 
   <pre><code>
-  index.html
+######  index.html
   ----------
 
   &lt;!doctype html&gt;
@@ -57,7 +57,7 @@ Workflow for a web application development
   &lt;/body&gt;
   &lt;/html&gt;
 
-  main.less
+######  main.less
   ----------
 
   @primary-color: #e1b283
@@ -67,7 +67,7 @@ Workflow for a web application development
   }
 
 
-  script.coffee
+######  script.coffee
   -------------
 
   process = -&gt;
@@ -77,7 +77,7 @@ Workflow for a web application development
   	$(&apos;h1&apos;).append(&apos;Hello There&apos;)
 	
 
-  gulpfile.js
+######  gulpfile.js
   -----------
 
   var gulp = require(&apos;gulp&apos;),
