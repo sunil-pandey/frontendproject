@@ -3,7 +3,7 @@
 
 Workflow for a web application development
 
-## 1. create a new project in task04 folder using the following commands
+## 1. create a new project in task03 folder using the following commands
 
   - npm init
   - npm install --save-dev gulp
