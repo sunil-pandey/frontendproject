@@ -44,7 +44,7 @@ Workflow for a web application development
   &lt;html lang=&quot;en&quot;&gt;
   &lt;head&gt;
 	&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script&gt;
-    <meta charset="UTF-8">
+    &lt;meta charset="UTF-8"&gt;
     <title>Workflow</title>
     <link rel="stylesheet" href="css/style.css" >
   &lt;/head&gt;
