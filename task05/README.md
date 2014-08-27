@@ -1,0 +1,1 @@
+Practice using JSFiddle http://jsfiddle.net
