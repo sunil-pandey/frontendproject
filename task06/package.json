@@ -1,0 +1,26 @@
+{
+  "name": "task07",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tushardemo/frontendninja"
+  },
+  "keywords": [
+    "modules"
+  ],
+  "author": "Tushar Joshi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tushardemo/frontendninja/issues"
+  },
+  "homepage": "https://github.com/tushardemo/frontendninja",
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-jasmine": "^0.2.0"
+  }
+}
