@@ -1,5 +1,5 @@
-29 August 2014 - Task 06
-========================
+01 September 2014 - Task 06
+===========================
 
 ## 1) Learn the following concepts, using the articles mentioned in the accompanying like.  You can search more for new articles to go into depth.
 
