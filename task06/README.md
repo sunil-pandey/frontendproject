@@ -12,7 +12,7 @@
   - JavaScript IIFE explained  
 	http://benalman.com/news/2010/11/immediately-invoked-function-expression/
 	
-## 2) The task07 folder has following files
+## 2) The task06 folder has following files
 
   <pre><code>
   task06
