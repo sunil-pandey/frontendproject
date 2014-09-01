@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html dir="ltr" class="client-js ve-not-available" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>jQuery - Wikipedia, the free encyclopedia</title>
+<meta name="generator" content="MediaWiki 1.24wmf15">
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/JQuery">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=edit">
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=edit">
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png">
+<link rel="shortcut icon" href="http://bits.wikimedia.org/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd">
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="canonical" href="http://en.wikipedia.org/wiki/JQuery">
+<link rel="stylesheet" href="images/load.css">
+<style>
+@-webkit-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-webkit-transform:translateY(-20px)}100%{opacity:1;-webkit-transform:translateY(0)}}@-moz-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-moz-transform:translateY(-20px)}100%{opacity:1;-moz-transform:translateY(0)}}@-o-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-o-transform:translateY(-20px)}100%{opacity:1;-o-transform:translateY(0)}}@keyframes centralAuthPPersonalAnimation{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}.centralAuthPPersonalAnimation{-webkit-animation-duration:1s;-moz-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:centralAuthPPersonalAnimation;-moz-animation-name:centralAuthPPersonalAnimation;-o-animation-name:centralAuthPPersonalAnimation;animation-name:centralAuthPPersonalAnimation}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:0dcacc990dd02e7db9669ab3090b80f1 */
+.mw-editsection{white-space:nowrap; unicode-bidi:-moz-isolate;unicode-bidi:-webkit-isolate;unicode-bidi:isolate}.mw-editsection-divider{color:#555}.ve-tabmessage-appendix{font-size:0.7em;vertical-align:top;line-height:1.43em;padding-left:0.5em; background-image:none !important;display:inline !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:50c6a67a11952da7c9e5053046d794ee */
+.uls-menu a{cursor:pointer}.uls-menu.callout .caret-before{border-top:20px solid transparent;border-right:20px solid #C9C9C9;border-bottom:20px solid transparent;display:inline-block;left:-21px;top:30px;position:absolute}.uls-menu.callout .caret-after{border-top:20px solid transparent;border-right:20px solid #FCFCFC;border-bottom:20px solid transparent;display:inline-block;left:-20px;top:30px;position:absolute}.uls-ui-languages button{width:23%;text-overflow:ellipsis;margin-right:4%}button.uls-more-languages{width:auto}.settings-title{font-size:11pt}.settings-text{color:#555555;font-size:9pt}div.display-settings-block:hover .settings-text{color:#252525}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:22d1681fa868b4ff4fbcb1ec1e58a9ea */
+.tipsy{padding:5px;position:absolute;z-index:100000;cursor:default}.tipsy-inner{padding:5px 8px 4px 8px; background-color:#ffffff;border:solid 1px #a7d7f9;color:black;max-width:15em;border-radius:4px; }.tipsy-arrow{position:absolute;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALAgMAAADUwp+1AAAACVBMVEX5+fmn1/n///9s6BFKAAAAAXRSTlMAQObYZgAAACpJREFUCB1jZBD4wMiQMoeRcUU4I9uSaYxSE54xZjn8AtMgPkgcJA9UBwAeDw1Qrb3pVAAAAABJRU5ErkJggg==) no-repeat top left;background:url(//bits.wikimedia.org/static-1.24wmf15/resources/src/jquery.tipsy/images/tipsy.png?2014-07-24T17:18:20Z) no-repeat top left!ie;width:11px;height:6px} .tipsy-n .tipsy-arrow{top:0px;left:50%;margin-left:-5px} .tipsy-nw .tipsy-arrow{top:1px;left:10px} .tipsy-ne .tipsy-arrow{top:1px;right:10px} .tipsy-s .tipsy-arrow{bottom:0px;left:50%;margin-left:-5px;background-position:bottom left} .tipsy-sw .tipsy-arrow{bottom:0px;left:10px;background-position:bottom left} .tipsy-se .tipsy-arrow{bottom:0px;right:10px;background-position:bottom left} .tipsy-e .tipsy-arrow{top:50%;margin-top:-5px;right:1px;width:5px;height:11px;background-position:top right} .tipsy-w .tipsy-arrow{top:50%;margin-top:-5px;left:0px;width:6px;height:11px}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:51bac44d8e07e8f5805583c22617ee00 */
+@media print{#centralNotice{display:none}}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ddb0c98a055632ae8e349c9cf48ac703 */
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(//bits.wikimedia.org/static-1.24wmf15/resources/src/mediawiki.action/images/green-checkmark.png?2014-07-24T17:18:20Z)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:e4278e03cfe31fd402289d7b127426f6 */
+.mw-collapsible-toggle{float:right;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.mw-customtoggle,.mw-collapsible-toggle{cursor:pointer} caption .mw-collapsible-toggle{float:none} li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:869aa9133c31e6040d4830b259da96a8 */
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px -1px 0 0} html > body .suggestions{margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.highlight{font-weight:bold}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:9f9511aa4ef920d34591113e825e6a1e */
+.wp-teahouse-question-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}#wp-th-question-ask{float:right}.wp-teahouse-ask a.external{background-image:none !important}.wp-teahouse-respond-form{position:absolute;margin-left:auto;margin-right:auto;background-color:#f4f3f0;border:1px solid #a7d7f9;padding:1em}.wp-th-respond{float:right}.wp-teahouse-respond a.external{background-image:none !important}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:8614dfa7ef847fc9bfcc2d1c9f720197 */
+.referencetooltip{position:absolute;list-style:none;list-style-image:none;opacity:0;font-size:10px;margin:0;z-index:5;padding:0}.referencetooltip li{border:#080086 2px solid;max-width:260px;padding:10px 8px 13px 8px;margin:0px;background-color:#F7F7F7;box-shadow:2px 4px 2px rgba(0,0,0,0.3);-moz-box-shadow:2px 4px 2px rgba(0,0,0,0.3);-webkit-box-shadow:2px 4px 2px rgba(0,0,0,0.3)}.referencetooltip li+li{margin-left:7px;margin-top:-2px;border:0;padding:0;height:3px;width:0px;background-color:transparent;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;border-top:12px #080086 solid;border-right:7px transparent solid;border-left:7px transparent solid}.referencetooltip>li+li::after{content:'';border-top:8px #F7F7F7 solid;border-right:5px transparent solid;border-left:5px transparent solid;margin-top:-12px;margin-left:-5px;z-index:1;height:0px;width:0px;display:block}.client-js body .referencetooltip li li{border:none;box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;height:auto;width:auto;margin:auto;padding:0;position:static}.RTflipped{padding-top:13px}.referencetooltip.RTflipped li+li{position:absolute;top:2px;border-top:0;border-bottom:12px #080086 solid}.referencetooltip.RTflipped li+li::after{border-top:0;border-bottom:8px #F7F7F7 solid;position:absolute;margin-top:7px}.RTsettings{float:right;height:16px;width:16px;cursor:pointer;background-image:url(//upload.wikimedia.org/wikipedia/commons/e/ed/Cog.png);margin-top:-9px;margin-right:-7px;-webkit-transition:opacity 0.15s;-moz-transition:opacity 0.15s;-o-transition:opacity 0.15s;-ms-transition:opacity 0.15s;transition:opacity 0.15s;opacity:0.6;filter:alpha(opacity=60)}.RTsettings:hover{opacity:1;filter:alpha(opacity=100)}.RTTarget{border:#080086 2px solid}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:7efa21f6db726653194905048a6b006a */
+.mw-mmv-overlay{position:fixed;top:0px;left:0px;right:0px;bottom:0px;z-index:1000;background-color:#000000}body.mw-mmv-lightbox-open{overflow-y:auto}body.mw-mmv-lightbox-open #mw-page-base,body.mw-mmv-lightbox-open #mw-head-base,body.mw-mmv-lightbox-open #mw-navigation,body.mw-mmv-lightbox-open #content,body.mw-mmv-lightbox-open #footer,body.mw-mmv-lightbox-open #globalWrapper // monobook{ display:none}body.mw-mmv-lightbox-open > *{ display:none}body.mw-mmv-lightbox-open > .mw-mmv-overlay,body.mw-mmv-lightbox-open > .mw-mmv-wrapper{display:block}.mw-mmv-view-expanded{display:inline-block;border:1px solid #dddddd;padding:5px 10px;padding-left:35px;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE3LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIKCSBpZD0iTGF5ZXJfMSIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCgkgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA5MDAuNCA3NjgiCgkgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgOTAwLjQgNzY4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cG9seWdvbiBmaWxsPSIjNzc3Nzc3IiBwb2ludHM9IjU5OS45LDE4Ni40IDYzMS4xLDIxNy42IDU0NS41LDMwMy4yIDUyNC4xLDI4MS43IDUxOSwzNjkuNiA2MDYuOSwzNjQuNiA1ODUuNCwzNDMuMSA2NzEsMjU3LjUgCgkJNzAyLjIsMjg4LjcgNzA5LjIsMTc5LjQgCSIvPgoJPHBvbHlnb24gZmlsbD0iIzc3Nzc3NyIgcG9pbnRzPSI1NDUuNSwyNjguOCA1ODcuNiwyMjcgNTAzLjUsMjI3IDU0MS4zLDI2NC44IAkiLz4KCTxwYXRoIGZpbGw9IiM3Nzc3NzciIGQ9Ik01MjAuNCwzOTMuOWwtMjcuMywxLjZsMS42LTI3LjNsNS04Ny43bDMuMS01My41SDE5MS4ydjM2Mmg0NzFWMzg1LjhsLTUzLjgsMy4xTDUyMC40LDM5My45eiBNNjExLjIsNTQxCgkJSDIzNy43bDExMC41LTE0NC4xTDM2NSwzOTBsMTA0LjQsMTA5LjNsNTYuNS0zMy43bDg1LjIsNzUuMUw2MTEuMiw1NDFMNjExLjIsNTQxeiIvPgoJPHBvbHlnb24gZmlsbD0iIzc3Nzc3NyIgcG9pbnRzPSI2MjQuMiwzNDcuMyA2NjIuMiwzODUuMyA2NjIuMiwzMDEgNjIwLDM0My4xIAkiLz4KPC9nPgo8L3N2Zz4K);background-image:url(//bits.wikimedia.org/static-1.24wmf15/extensions/MultimediaViewer/resources/mmv/img/expand.svg?2014-07-24T17:20:00Z)!ie;background-position:left;background-repeat:no-repeat}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:db3bb272f4353febe1e83f52e1d023fd */
+#p-lang .uls-settings-trigger{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAgCAMAAAAVMLmlAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAALpQTFRF////W1tbgICAWVlZgICAUVFRgICAWVlZhYWFUlJShYWFVFRUgYGBVVVVgYGBVVVVgICAVFRUVVVVVlZWgYGBgICAVFRUgYGBVFRUgICAgYGBVVVVVVVVgYGBVlZWgYGBVFRUgICAVFRUgICAVVVVgICAVlZWgICAVFRUgICAVVVVgICAVFRUgICAVlZWgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICAVVVVgICA9Fa9bgAAADx0Uk5TAA4OFBQWFhcXGRlJSUtLWlpbXV9fYGFhZGRlZmlpa2twcIiIioqPj5GRn5+goKGh6+vv7/Dw+fn8/P7+YuRUVgAAAOlJREFUGBmNwcdWAgEURMFLFCUaAcWAEhQYHBRmCN3//1u+BYcVC6s4p2U3OLrrVxN7Xn7uELoH5w65Dx1g6JNnoLazfz++VnZehkZir4pQ3NjzBg5TwtgBhzFh6kDr294UobiykxZc7ezVdLyx8yrw6pM+8GjnDjsf7gj3/WpiJ7Vhl6OW3eC/mlKdo5teZSHNSoM24XqvTCHTvg0MdDIASpn08/6ZSlkJ6jMpLUBhLc3qKEwIIwUURoSJAs2ltC5AIZUWTbjcSulktJayCvCikx7wJG0VttrfEp5eLpfS4uLtgaOmVOeMP8BAM9RClMO9AAAAAElFTkSuQmCC) no-repeat right top;background:transparent url(//bits.wikimedia.org/static-1.24wmf15/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.png?2014-07-24T17:21:40Z) no-repeat right top!ie;background-image:-webkit-linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNCIgaGVpZ2h0PSIzMiI+PGRlZnM+PHBhdGggZD0iTTEzLjU4MiA2LjYzMmgtMS4wNjRjLS4xMzMtLjUzOC0uMzU0LTEuMDY1LS42NDUtMS41NTJsLjc1LS43NWMuMTY0LS4xNjQuMTY0LS40MjkgMC0uNTkzbC0xLjM1OS0xLjM2Yy0uMTY0LS4xNjQtLjQzLS4xNjQtLjU5NCAwbC0uNzUuNzVjLS40OS0uMjk0LTEuMDEyLS41MTItMS41NTEtLjY0NXYtMS4wNjRjMC0uMjMxLS4xODctLjQxOC0uNDE5LS40MThoLTEuOTE4Yy0uMjMxIDAtLjQxOC4xODctLjQxOC40MTh2MS4wNjNjLS41NDEuMTM1LTEuMDYyLjM1Mi0xLjU1Mi42NDZsLS43NS0uNzVjLS4xNjQtLjE2NC0uNDI5LS4xNjQtLjU5MyAwbC0xLjM2IDEuMzZjLS4xNjQuMTY0LS4xNjQuNDI5IDAgLjU5M2wuNzUuNzVjLS4yOTIuNDg4LS40OTQgMS4wMTUtLjYyNyAxLjU1MWgtMS4wNjRjLS4yMzEgMC0uNDE4LjE4Ny0uNDE4LjQxOXYxLjkxOGMwIC4yMzEuMTg3LjQxOC40MTguNDE4aDEuMDQ2Yy4xMzQuNTQyLjM1MSAxLjA2Mi42NDUgMS41NTFsLS43NS43NWMtLjE2NC4xNjQtLjE2NC40MjkgMCAuNTkzbDEuMzYgMS4zNmMuMTY0LjE2NC40MjkuMTY0LjU5MyAwbC43NS0uNzVjLjQ5MS4yOTYgMS4wMS40OTMgMS41NTEuNjI3djEuMDYzYy4wMDEuMjMzLjE4OC40Mi40MTkuNDJoMS45MThjLjIzMSAwIC40MTktLjE4Ny40MTktLjQxOHYtMS4wNjNjLjU0Mi0uMTM0IDEuMDYxLS4zMzMgMS41NTEtLjYyN2wuNzUuNzVjLjE2NC4xNjQuNDMuMTY0LjU5NCAwbDEuMzU5LTEuMzZjLjE2NC0uMTY0LjE2NC0uNDI5IDAtLjU5M2wtLjc1LS43NWMuMjk1LS40ODkuNTEtMS4wMTMuNjQ1LTEuNTUxaDEuMDY0Yy4yMy0uMDAyLjQxOC0uMTg5LjQxOC0uNDJ2LTEuOTE4YzAtLjIzMi0uMTg4LS40MTgtLjQxOC0uNDE4em0tNi41ODIgNC4wMTJjLTEuNDYxIDAtMi42NDUtMS4xODQtMi42NDUtMi42NDRzMS4xODQtMi42NDQgMi42NDUtMi42NDQgMi42NDUgMS4xODQgMi42NDUgMi42NDQtMS4xODQgMi42NDQtMi42NDUgMi42NDR6IiBpZD0iYSIvPjwvZGVmcz48dXNlIHhsaW5rOmhyZWY9IiNhIiBmaWxsPSIjODA4MDgwIi8+PHVzZSB4bGluazpocmVmPSIjYSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxNikiIGZpbGw9IiM1NTUiLz48L3N2Zz4=);background-image:-webkit-linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.24wmf15/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2014-07-24T17:21:40Z)!ie;background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIxNCIgaGVpZ2h0PSIzMiI+PGRlZnM+PHBhdGggZD0iTTEzLjU4MiA2LjYzMmgtMS4wNjRjLS4xMzMtLjUzOC0uMzU0LTEuMDY1LS42NDUtMS41NTJsLjc1LS43NWMuMTY0LS4xNjQuMTY0LS40MjkgMC0uNTkzbC0xLjM1OS0xLjM2Yy0uMTY0LS4xNjQtLjQzLS4xNjQtLjU5NCAwbC0uNzUuNzVjLS40OS0uMjk0LTEuMDEyLS41MTItMS41NTEtLjY0NXYtMS4wNjRjMC0uMjMxLS4xODctLjQxOC0uNDE5LS40MThoLTEuOTE4Yy0uMjMxIDAtLjQxOC4xODctLjQxOC40MTh2MS4wNjNjLS41NDEuMTM1LTEuMDYyLjM1Mi0xLjU1Mi42NDZsLS43NS0uNzVjLS4xNjQtLjE2NC0uNDI5LS4xNjQtLjU5MyAwbC0xLjM2IDEuMzZjLS4xNjQuMTY0LS4xNjQuNDI5IDAgLjU5M2wuNzUuNzVjLS4yOTIuNDg4LS40OTQgMS4wMTUtLjYyNyAxLjU1MWgtMS4wNjRjLS4yMzEgMC0uNDE4LjE4Ny0uNDE4LjQxOXYxLjkxOGMwIC4yMzEuMTg3LjQxOC40MTguNDE4aDEuMDQ2Yy4xMzQuNTQyLjM1MSAxLjA2Mi42NDUgMS41NTFsLS43NS43NWMtLjE2NC4xNjQtLjE2NC40MjkgMCAuNTkzbDEuMzYgMS4zNmMuMTY0LjE2NC40MjkuMTY0LjU5MyAwbC43NS0uNzVjLjQ5MS4yOTYgMS4wMS40OTMgMS41NTEuNjI3djEuMDYzYy4wMDEuMjMzLjE4OC40Mi40MTkuNDJoMS45MThjLjIzMSAwIC40MTktLjE4Ny40MTktLjQxOHYtMS4wNjNjLjU0Mi0uMTM0IDEuMDYxLS4zMzMgMS41NTEtLjYyN2wuNzUuNzVjLjE2NC4xNjQuNDMuMTY0LjU5NCAwbDEuMzU5LTEuMzZjLjE2NC0uMTY0LjE2NC0uNDI5IDAtLjU5M2wtLjc1LS43NWMuMjk1LS40ODkuNTEtMS4wMTMuNjQ1LTEuNTUxaDEuMDY0Yy4yMy0uMDAyLjQxOC0uMTg5LjQxOC0uNDJ2LTEuOTE4YzAtLjIzMi0uMTg4LS40MTgtLjQxOC0uNDE4em0tNi41ODIgNC4wMTJjLTEuNDYxIDAtMi42NDUtMS4xODQtMi42NDUtMi42NDRzMS4xODQtMi42NDQgMi42NDUtMi42NDQgMi42NDUgMS4xODQgMi42NDUgMi42NDQtMS4xODQgMi42NDQtMi42NDUgMi42NDR6IiBpZD0iYSIvPjwvZGVmcz48dXNlIHhsaW5rOmhyZWY9IiNhIiBmaWxsPSIjODA4MDgwIi8+PHVzZSB4bGluazpocmVmPSIjYSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxNikiIGZpbGw9IiM1NTUiLz48L3N2Zz4=);background-image:linear-gradient(transparent,transparent),url(//bits.wikimedia.org/static-1.24wmf15/extensions/UniversalLanguageSelector/resources/css/../images/cog-sprite.svg?2014-07-24T17:21:40Z)!ie;height:16px;width:14px;float:right;cursor:pointer}.skin-vector #p-lang .uls-settings-trigger{ margin-top:3px}#p-lang .uls-settings-trigger:hover{background-position:right -16px}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:e35dd88acdd30f5be0eff579b3711b98 */</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:black;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:ae3fa4570b5ac0c6cf7b3776c8ae4d6f */</style><style>
+.cite-accessibility-label{position:absolute !important; top:-99999px;clip:rect(1px 1px 1px 1px); clip:rect(1px,1px,1px,1px);padding:0 !important;border:0 !important;height:1px !important;width:1px !important;overflow:hidden}.mw-cite-backlink,.cite-accessibility-label{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:a59b70abe6ecaa39388bb79ebc509cb0 */
+table.jquery-tablesorter th.headerSort{background-image:url(data:image/gif;base64,R0lGODlhFQAJAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODcwMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODZGMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAJAAACF4yPgMsJ2mJ4VDKKrd4GVz5lYPeMiVUAADs=);background-image:url(//bits.wikimedia.org/static-1.24wmf15/resources/src/jquery/images/sort_both.gif?2014-07-24T17:18:20Z)!ie;cursor:pointer;background-repeat:no-repeat;background-position:center right;padding-right:21px}table.jquery-tablesorter th.headerSortUp{background-image:url(data:image/gif;base64,R0lGODlhFQAEAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAzODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdCNTAyODc0MEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdCNTAyODczMEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDM4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDM4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAEAAACDYwfoAvoz9qbZ9FrJC0AOw==);background-image:url(//bits.wikimedia.org/static-1.24wmf15/resources/src/jquery/images/sort_up.gif?2014-07-24T17:18:20Z)!ie}table.jquery-tablesorter th.headerSortDown{background-image:url(data:image/gif;base64,R0lGODlhFQAEAIABAAAAAAAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjAyODAxMTc0MDcyMDY4MTE4OEM2REYyN0ExMDhBNDJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjhFNzNGQjI3MEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjhFNzNGQjI2MEY4NjExRTBBMzkyQzAyM0E1RDk3RDc3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzUgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDI4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDI4MDExNzQwNzIwNjgxMTg4QzZERjI3QTEwOEE0MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQBAAABACwAAAAAFQAEAAACDYyPAcmtsJyDVDKKWQEAOw==);background-image:url(//bits.wikimedia.org/static-1.24wmf15/resources/src/jquery/images/sort_down.gif?2014-07-24T17:18:20Z)!ie}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:6c2ba0aa793d5409ae296d54a9540609 */</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="images/load_002.css">
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: enwiki:resourceloader:filter:minify-css:7:3904d24a08aa08f6a68dc338f9be277e */</style>
+<script src="images/load_003.php"></script><script src="images/load.php"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"JQuery","wgTitle":"JQuery","wgCurRevisionId":617387086,"wgRevisionId":617387086,"wgArticleId":7672626,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Commons category with local link same as on Wikidata","JavaScript libraries","Free software programmed in JavaScript","Ajax (programming)","Software using the MIT license","2006 software"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"JQuery","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Jquery","wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"preview":false,"previewDialog":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgVisualEditor":{"isPageWatched":false,"magnifyClipIconURL":"//bits.wikimedia.org/static-1.24wmf15/skins/common/images/magnify-clip.png","pageLanguageCode":"en","pageLanguageDir":"ltr","svgMaxSize":2048,"namespacesWithSubpages":{"6":0,"8":0,"1":true,"2":true,"3":true,"4":true,"5":true,"7":true,"9":true,"10":true,"11":true,"12":true,"13":true,"14":true,"15":true,"100":true,"101":true,"102":true,"103":true,"104":true,"105":true,"106":true,"107":true,"108":true,"109":true,"110":true,"111":true,"447":true,"2600":false,"828":true,"829":true}},"wikilove-recipient":"","wikilove-anon":0,"wgGuidedTourHelpGuiderUrl":"Help:Guided tours/guider","wgULSAcceptLanguageList":["en-us","en"],"wgULSCurrentAutonym":"English","wgFlaggedRevsParams":{"tags":{"status":{"levels":1,"quality":2,"pristine":3}}},"wgStableRevisionId":null,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikipedia","wgWikibaseItemId":"Q230036"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"editfont":"default","editondblclick":0,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"imagesize":2,"math":0,"minordefault":0,"newpageshidepatrolled":0,"nickname":"","norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"rcdays":7,"rclimit":50,"rows":25,"showhiddencats":false,"shownumberswatching":1,"showtoolbar":1,"skin":"vector","stubthreshold":0,"thumbsize":4,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":1,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,
+"useeditwarning":1,"prefershttps":1,"flaggedrevssimpleui":1,"flaggedrevsstable":0,"flaggedrevseditdiffs":true,"flaggedrevsviewdiffs":false,"usebetatoolbar":1,"usebetatoolbar-cgd":1,"multimediaviewer-enable":true,"visualeditor-enable":0,"visualeditor-betatempdisable":0,"visualeditor-enable-experimental":0,"visualeditor-enable-language":0,"visualeditor-hidebetawelcome":0,"wikilove-enabled":1,"mathJax":false,"echo-subscriptions-web-page-review":true,"echo-subscriptions-email-page-review":false,"ep_showtoplink":false,"ep_bulkdelorgs":false,"ep_bulkdelcourses":true,"ep_showdyk":true,"echo-subscriptions-web-education-program":true,"echo-subscriptions-email-education-program":false,"echo-notify-show-link":true,"echo-show-alert":true,"echo-email-frequency":0,"echo-email-format":"html","echo-subscriptions-email-system":true,"echo-subscriptions-web-system":true,"echo-subscriptions-email-user-rights":true,"echo-subscriptions-web-user-rights":true,"echo-subscriptions-email-other":false,
+"echo-subscriptions-web-other":true,"echo-subscriptions-email-edit-user-talk":false,"echo-subscriptions-web-edit-user-talk":true,"echo-subscriptions-email-reverted":false,"echo-subscriptions-web-reverted":true,"echo-subscriptions-email-article-linked":false,"echo-subscriptions-web-article-linked":false,"echo-subscriptions-email-mention":false,"echo-subscriptions-web-mention":true,"echo-subscriptions-web-edit-thank":true,"echo-subscriptions-email-edit-thank":false,"echo-subscriptions-web-flow-discussion":true,"echo-subscriptions-email-flow-discussion":false,"gettingstarted-task-toolbar-show-intro":true,"uls-preferences":"","language":"en","variant-gan":"gan","variant-iu":"iu","variant-kk":"kk","variant-ku":"ku","variant-shi":"shi","variant-sr":"sr","variant-tg":"tg","variant-uz":"uz","variant-zh":"zh","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,
+"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs108":false,"searchNs109":false,"searchNs118":false,"searchNs119":false,"searchNs446":false,"searchNs447":false,"searchNs710":false,"searchNs711":false,"searchNs828":false,"searchNs829":false,"searchNs2600":false,"gadget-teahouse":1,"gadget-ReferenceTooltips":1,"gadget-DRN-wizard":1,"gadget-charinsert":1,"gadget-refToolbar":1,"gadget-mySandbox":1,"variant":"en"});},{},{});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":false,"watchToken":false});},{},{});
+/* cache key: enwiki:resourceloader:filter:minify-js:7:ffff827f827051d73171f6b2dc70d368 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","ext.centralauth.centralautologin","mmv.head","ext.visualEditor.viewPageTarget.init","ext.uls.init","ext.uls.interface","ext.centralNotice.bannerController","skins.vector.js"]);
+}</script>
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/">
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.24wmf15/skins/Vector/csshover.min.htc")}</style><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-JQuery skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><div id="centralNotice"></div><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">jQuery</span></h1>
+						<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub">&nbsp;&nbsp;(Redirected from <a href="http://en.wikipedia.org/w/index.php?title=Jquery&amp;redirect=no" title="Jquery">Jquery</a>)</div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><table class="infobox vevent" style="border-spacing:3px;width:22em;" cellspacing="3">
+<caption class="summary">jQuery</caption>
+<tbody><tr>
+<td colspan="2" style="text-align:center;"><a href="http://en.wikipedia.org/wiki/File:JQuery_logo.svg" class="image"><img alt="JQuery logo.svg" src="images/220px-JQuery_logo.png" srcset="//upload.wikimedia.org/wikipedia/en/thumb/9/9e/JQuery_logo.svg/330px-JQuery_logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/9/9e/JQuery_logo.svg/440px-JQuery_logo.svg.png 2x" data-file-width="524" data-file-height="128" height="54" width="220"></a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="http://en.wikipedia.org/wiki/Software_design" title="Software design">Original author(s)</a></th>
+<td><a href="http://en.wikipedia.org/wiki/John_Resig" title="John Resig">John Resig</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="http://en.wikipedia.org/wiki/Software_developer" title="Software developer">Developer(s)</a></th>
+<td>jQuery Team</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;">Initial release</th>
+<td>August&nbsp;26,&nbsp;2006<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2006-08-26</span>)</span></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="http://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">Stable release</a></th>
+<td>1.11.1 (May&nbsp;1,&nbsp;2014<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2014-05-01</span>)</span>)<br>
+2.1.1 (May&nbsp;1,&nbsp;2014<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2014-05-01</span>)</span>)</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;">Development status</th>
+<td>Active</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;">Written in</th>
+<td><a href="http://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="http://en.wikipedia.org/wiki/Computing_platform" title="Computing platform">Platform</a></th>
+<td>See <a href="#Browser_support">Browser support</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="http://en.wikipedia.org/wiki/File_size" title="File size">Size</a></th>
+<td>
+<table class="wikitable" style="margin:0;">
+<tbody><tr>
+<td><abbr title="version">ver</abbr></td>
+<td><abbr title="compressed and gzipped">gzip</abbr></td>
+<td><abbr title="compressed, production mode">prod</abbr></td>
+<td><abbr title="uncompressed, development mode">dev</abbr></td>
+</tr>
+<tr>
+<td>1.x</td>
+<td>31</td>
+<td>90.9</td>
+<td>266</td>
+</tr>
+<tr>
+<td>2.x</td>
+<td>27.7</td>
+<td>81.6</td>
+<td>236</td>
+</tr>
+</tbody></table>
+(<a href="http://en.wikipedia.org/wiki/Kilobyte#Base_2_definition" title="Kilobyte">KB</a>)</td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="http://en.wikipedia.org/wiki/List_of_software_categories" title="List of software categories">Type</a></th>
+<td><a href="http://en.wikipedia.org/wiki/JavaScript_library" title="JavaScript library">JavaScript library</a></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;"><a href="http://en.wikipedia.org/wiki/Software_license" title="Software license">License</a></th>
+<td><a href="http://en.wikipedia.org/wiki/MIT_License" title="MIT License">MIT</a><sup id="cite_ref-jqorg-license_1-0" class="reference"><a href="#cite_note-jqorg-license-1"><span>[</span>1<span>]</span></a></sup></td>
+</tr>
+<tr>
+<th scope="row" style="text-align:left;white-space: nowrap;;">Website</th>
+<td><span class="url"><a rel="nofollow" class="external text" href="http://jquery.com/">jquery.com</a></span></td>
+</tr>
+</tbody></table>
+<p><b>jQuery</b> is a <a href="http://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">cross-platform</a> <a href="http://en.wikipedia.org/wiki/JavaScript_library" title="JavaScript library">JavaScript library</a> designed to simplify the <a href="http://en.wikipedia.org/wiki/Client-side_scripting" title="Client-side scripting">client-side scripting</a> of <a href="http://en.wikipedia.org/wiki/HTML" title="HTML">HTML</a>.<sup id="cite_ref-jquery.com_2-0" class="reference"><a href="#cite_note-jquery.com-2"><span>[</span>2<span>]</span></a></sup> It was released in January 2006 at <a href="http://en.wikipedia.org/wiki/BarCamp" title="BarCamp">BarCamp</a> NYC by <a href="http://en.wikipedia.org/wiki/John_Resig" title="John Resig">John Resig</a>. It is currently developed by a team of developers led by Dave Methvin. Used by over 60% of the 10,000 most visited websites,<sup id="cite_ref-3" class="reference"><a href="#cite_note-3"><span>[</span>3<span>]</span></a></sup> jQuery is the most popular <a href="http://en.wikipedia.org/wiki/JavaScript_library" title="JavaScript library">JavaScript library</a> in use today.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup><sup id="cite_ref-5" class="reference"><a href="#cite_note-5"><span>[</span>5<span>]</span></a></sup></p>
+<p>jQuery is <a href="http://en.wikipedia.org/wiki/Free_and_open_source_software" title="Free and open source software" class="mw-redirect">free, open source software</a>, licensed under the <a href="http://en.wikipedia.org/wiki/MIT_License" title="MIT License">MIT License</a>.<sup id="cite_ref-jqorg-license_1-1" class="reference"><a href="#cite_note-jqorg-license-1"><span>[</span>1<span>]</span></a></sup> jQuery's syntax is designed to make it easier to navigate a document, select <a href="http://en.wikipedia.org/wiki/Document_Object_Model" title="Document Object Model">DOM</a> elements, create <a href="http://en.wikipedia.org/wiki/Animation" title="Animation">animations</a>, handle <a href="http://en.wikipedia.org/wiki/Event_%28computing%29" title="Event (computing)">events</a>, and develop <a href="http://en.wikipedia.org/wiki/Ajax_%28programming%29" title="Ajax (programming)">Ajax applications</a>. jQuery also provides capabilities for developers to create <a href="http://en.wikipedia.org/wiki/Plug-in_%28computing%29" title="Plug-in (computing)">plug-ins</a> on top of the JavaScript library. This enables developers to create <a href="http://en.wikipedia.org/wiki/Abstraction_%28computer_science%29" title="Abstraction (computer science)">abstractions</a>
+ for low-level interaction and animation, advanced effects and 
+high-level, theme-able widgets. The modular approach to the jQuery 
+library allows the creation of powerful <a href="http://en.wikipedia.org/wiki/Dynamic_web_page" title="Dynamic web page">dynamic web pages</a> and web applications.</p>
+<p>The set of <a href="#Features">jQuery core features</a>—DOM element selections, traversal and manipulation—enabled by its <i>selector engine</i>
+ (named "Sizzle" from v1.3), created a new "programming style", fusing 
+algorithms and DOM-data-structures. This style influenced the 
+architecture of other <a href="http://en.wikipedia.org/wiki/Comparison_of_JavaScript_frameworks" title="Comparison of JavaScript frameworks">JavaScript frameworks</a> like <a href="http://en.wikipedia.org/wiki/YUI_Library" title="YUI Library">YUI v3</a> and <a href="http://en.wikipedia.org/wiki/Dojo_Toolkit" title="Dojo Toolkit">Dojo</a>, later stimulating the creation of the standard <i>Selectors API</i>.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6"><span>[</span>6<span>]</span></a></sup></p>
+<p><a href="http://en.wikipedia.org/wiki/Microsoft" title="Microsoft">Microsoft</a> and <a href="http://en.wikipedia.org/wiki/Nokia" title="Nokia">Nokia</a> bundle jQuery on their platforms.<sup id="cite_ref-2008-09-28_7-0" class="reference"><a href="#cite_note-2008-09-28-7"><span>[</span>7<span>]</span></a></sup> Microsoft includes it with <a href="http://en.wikipedia.org/wiki/Visual_Studio" title="Visual Studio" class="mw-redirect">Visual Studio</a><sup id="cite_ref-8" class="reference"><a href="#cite_note-8"><span>[</span>8<span>]</span></a></sup> for use within Microsoft's <a href="http://en.wikipedia.org/wiki/ASP.NET_AJAX" title="ASP.NET AJAX">ASP.NET AJAX</a> framework and <a href="http://en.wikipedia.org/wiki/ASP.NET_MVC_Framework" title="ASP.NET MVC Framework">ASP.NET MVC Framework</a> while Nokia has integrated it into the Web Run-Time widget development platform.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup> jQuery has also been used in <a href="http://en.wikipedia.org/wiki/MediaWiki" title="MediaWiki">MediaWiki</a> since version 1.16.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+<span class="toctoggle">&nbsp;[<a href="#" class="internal" id="togglelink">hide</a>]&nbsp;</span>
+<!-- Generate TOC here -->
+
+</div>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Features">Features</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=edit&amp;section=1" title="Edit section: Features">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>jQuery includes the following features:</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Document_Object_Model" title="Document Object Model">DOM</a> element selections using the multi-browser open source selector engine <i>Sizzle</i>, a spin-off of the jQuery project<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup></li>
+<li>DOM traversal and modification (including support for CSS 1–3)</li>
+<li>DOM manipulation based on <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets" title="Cascading Style Sheets">CSS</a> selectors that uses node elements name and node elements attributes (id and class) as criteria to build selectors</li>
+<li>Events</li>
+<li>Effects and animations</li>
+<li><a href="http://en.wikipedia.org/wiki/AJAX_%28programming%29" title="AJAX (programming)" class="mw-redirect">AJAX</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JSON" title="JSON">JSON</a> parsing</li>
+<li><a href="http://en.wikipedia.org/wiki/Extensibility" title="Extensibility">Extensibility</a> through plug-ins</li>
+<li>Utilities - such as user agent information, feature detection</li>
+<li>Compatibility methods that are natively available in modern browsers but need fall backs for older ones - For example the <code>inArray()</code> and <code>each()</code> functions.</li>
+<li>Multi-browser (not to be confused with <a href="http://en.wikipedia.org/wiki/Cross-browser" title="Cross-browser">cross-browser</a>) support.</li>
+</ul>
+<h3><span class="mw-headline" id="Browser_support">Browser support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=edit&amp;section=2" title="Edit section: Browser support">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Both version 1.x and 2.x of jQuery support "current-1 versions" 
+(meaning the current stable version of the browser and the version that 
+preceded it) of <a href="http://en.wikipedia.org/wiki/Firefox" title="Firefox">Firefox</a>, <a href="http://en.wikipedia.org/wiki/Google_Chrome" title="Google Chrome">Google Chrome</a>, <a href="http://en.wikipedia.org/wiki/Safari_%28web_browser%29" title="Safari (web browser)">Safari</a>, and <a href="http://en.wikipedia.org/wiki/Opera_%28web_browser%29" title="Opera (web browser)">Opera</a>. The version 1.x also supports <a href="http://en.wikipedia.org/wiki/Internet_Explorer_6" title="Internet Explorer 6">Internet Explorer 6</a> or higher. However, jQuery version 2.x dropped <a href="http://en.wikipedia.org/wiki/Internet_Explorer" title="Internet Explorer">Internet Explorer</a> 6–8 support (which represents less than 28% of all <a href="http://en.wikipedia.org/wiki/Usage_share_of_web_browsers" title="Usage share of web browsers">browsers in use</a>) and can run only with <a href="http://en.wikipedia.org/wiki/Internet_Explorer_9" title="Internet Explorer 9">IE 9</a> or higher.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span>[</span>12<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Including_the_library">Including the library</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=edit&amp;section=3" title="Edit section: Including the library">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The jQuery library is a single JavaScript file, containing all of its
+ common DOM, event, effects, and Ajax functions. It can be included 
+within a web page by linking to a local copy, or to one of the many 
+copies available from public servers. jQuery has a <a href="http://en.wikipedia.org/wiki/Content_delivery_network" title="Content delivery network">CDN</a> hosted by <a rel="nofollow" class="external text" href="http://www.maxcdn.com/">MaxCDN</a><sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>13<span>]</span></a></sup> (moved from MediaTemple<sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span>[</span>14<span>]</span></a></sup> and, before that, Amazon<sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span>[</span>15<span>]</span></a></sup>). Google<sup id="cite_ref-16" class="reference"><a href="#cite_note-16"><span>[</span>16<span>]</span></a></sup> and Microsoft<sup id="cite_ref-17" class="reference"><a href="#cite_note-17"><span>[</span>17<span>]</span></a></sup> host it as well.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="html5 source-html5">
+<pre class="de1"><span class="sc2">&lt;<span class="kw2">script</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">"jquery.js"</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+</pre></div>
+</div>
+<p>It is also possible to include jQuery directly from content delivery networks.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="html5 source-html5">
+<pre class="de1"><span class="sc2">&lt;<span class="kw2">script</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">"//code.jquery.com/jquery-1.11.1.min.js"</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+</pre></div>
+</div>
+<h2><span class="mw-headline" id="Usage_styles">Usage styles</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=edit&amp;section=4" title="Edit section: Usage styles">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>jQuery has two usage styles:</p>
+<ul>
+<li>Via the <code xml:lang="jQuery" lang="jQuery">$</code> function, which is a <a href="http://en.wikipedia.org/wiki/Factory_method_pattern" title="Factory method pattern">factory method</a> for the jQuery object. These functions, often called <i>commands</i>, are <a href="http://en.wikipedia.org/wiki/Method_chaining" title="Method chaining"><i>chainable</i></a> as they all return jQuery objects.</li>
+<li>Via <code xml:lang="jQuery" lang="jQuery">$.</code>-prefixed functions. These are <i>utility functions</i>, which do not act upon the jQuery object directly.</li>
+</ul>
+<p>Typically, access to and manipulation of multiple DOM nodes begins with the <code xml:lang="jQuery" lang="jQuery">$</code> function being called with a <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets" title="Cascading Style Sheets">CSS</a> selector string, which results in a jQuery object referencing matching elements in the <a href="http://en.wikipedia.org/wiki/HTML" title="HTML">HTML</a>
+ page. This node set can be manipulated by calling instance methods on 
+the jQuery object, or on the nodes themselves. For example:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="javascript source-javascript">
+<pre class="de1">$<span class="br0">(</span><span class="st0">"div.test"</span><span class="br0">)</span>.<span class="me1">add</span><span class="br0">(</span><span class="st0">"p.quote"</span><span class="br0">)</span>.<span class="me1">addClass</span><span class="br0">(</span><span class="st0">"blue"</span><span class="br0">)</span>.<span class="me1">slideDown</span><span class="br0">(</span><span class="st0">"slow"</span><span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>This line finds the union of all <code xml:lang="HTML" lang="HTML">div</code> tags with class attribute <code xml:lang="HTML" lang="HTML">test</code> and all <code xml:lang="HTML" lang="HTML">p</code> tags with CSS class attribute <code xml:lang="HTML" lang="HTML">quote</code>, adds the class attribute <code xml:lang="HTML" lang="HTML">blue</code> to each matched element, and then increases their height with an animation. The <code xml:lang="jQuery" lang="jQuery">$</code> and <code xml:lang="jQuery" lang="jQuery">add</code> functions affect the matched set, while the <code xml:lang="jQuery" lang="jQuery">addClass</code> and <code xml:lang="jQuery" lang="jQuery">slideDown</code> affect the referenced nodes.</p>
+<p>Besides accessing DOM nodes through jQuery object hierarchy, it is 
+also possible to create new DOM elements if a string passed as the 
+argument to $() looks like HTML. For example, this line finds an HTML 
+SELECT element with ID="carmakes", and adds an OPTION element with value
+ "VAG" and text "Volkswagen":</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="javascript source-javascript">
+<pre class="de1">$<span class="br0">(</span><span class="st0">'select#carmakes'</span><span class="br0">)</span>.<span class="me1">append</span><span class="br0">(</span>$<span class="br0">(</span><span class="st0">'&lt;option /&gt;'</span><span class="br0">)</span>.<span class="me1">attr</span><span class="br0">(</span><span class="br0">{</span>value<span class="sy0">:</span><span class="st0">"VAG"</span><span class="br0">}</span><span class="br0">)</span>.<span class="me1">append</span><span class="br0">(</span><span class="st0">"Volkswagen"</span><span class="br0">)</span><span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>The methods prefixed with <code xml:lang="jQuery" lang="jQuery">$.</code>
+ are convenience methods or affect global properties and behaviour. For 
+example, the following is an example of the iterating function called <code xml:lang="jQuery" lang="jQuery">each</code> in jQuery:</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="javascript source-javascript">
+<pre class="de1">$.<span class="me1">each</span><span class="br0">(</span><span class="br0">[</span><span class="nu0">1</span><span class="sy0">,</span><span class="nu0">2</span><span class="sy0">,</span><span class="nu0">3</span><span class="br0">]</span><span class="sy0">,</span> <span class="kw1">function</span><span class="br0">(</span><span class="br0">)</span> <span class="br0">{</span>
+  console.<span class="me1">log</span><span class="br0">(</span><span class="kw1">this</span> <span class="sy0">+</span> <span class="nu0">1</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>This writes "2", "3", "4" to the console.</p>
+<p>It is possible to perform browser-independent <a href="http://en.wikipedia.org/wiki/Ajax_%28programming%29" title="Ajax (programming)">Ajax</a> queries using <code xml:lang="jQuery" lang="jQuery">$.ajax</code> and associated methods to load and manipulate remote data.</p>
+<div dir="ltr" class="mw-geshi mw-code mw-content-ltr">
+<div class="javascript source-javascript">
+<pre class="de1">$.<span class="me1">ajax</span><span class="br0">(</span><span class="br0">{</span>
+  type<span class="sy0">:</span> <span class="st0">"POST"</span><span class="sy0">,</span>
+  url<span class="sy0">:</span> <span class="st0">"example.php"</span><span class="sy0">,</span>
+  data<span class="sy0">:</span> <span class="st0">"name=John&amp;location=Boston"</span>
+<span class="br0">}</span><span class="br0">)</span>.<span class="me1">success</span><span class="br0">(</span> <span class="kw1">function</span><span class="br0">(</span>msg<span class="br0">)</span> <span class="br0">{</span>
+  alert<span class="br0">(</span> <span class="st0">"Data Saved: "</span> <span class="sy0">+</span> msg <span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span><span class="br0">)</span>.<span class="me1">fail</span><span class="br0">(</span> <span class="kw1">function</span><span class="br0">(</span> xmlHttpRequest<span class="sy0">,</span> statusText<span class="sy0">,</span> errorThrown <span class="br0">)</span> <span class="br0">{</span>
+  alert<span class="br0">(</span>
+    <span class="st0">"Your form submission failed.<span class="es0">\n</span><span class="es0">\n</span>"</span>
+      <span class="sy0">+</span> <span class="st0">"XML Http Request: "</span> <span class="sy0">+</span> JSON.<span class="me1">stringify</span><span class="br0">(</span> xmlHttpRequest <span class="br0">)</span>
+      <span class="sy0">+</span> <span class="st0">",<span class="es0">\n</span>Status Text: "</span> <span class="sy0">+</span> statusText
+      <span class="sy0">+</span> <span class="st0">",<span class="es0">\n</span>Error Thrown: "</span> <span class="sy0">+</span> errorThrown <span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span><span class="br0">)</span><span class="sy0">;</span>
+</pre></div>
+</div>
+<p>This example posts the data <code>name=John</code> and <code>location=Boston</code> to <code>example.php</code>
+ on the server. When this request finishes successfully, the success 
+function is called to alert the user. If the request fails, it will 
+alert the user to the failure, the status of the request, and the 
+specific error.</p>
+<h2><span class="mw-headline" id="jQuery_plug-ins">jQuery plug-ins</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=edit&amp;section=5" title="Edit section: jQuery plug-ins">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>jQuery's architecture allows developers to create <a href="http://en.wikipedia.org/wiki/Plug-in_%28computing%29" title="Plug-in (computing)">plug-in</a> code to extend its functionality. Currently there are thousands of jQuery plug-ins available on the web<sup id="cite_ref-plugins.jquery.com_18-0" class="reference"><a href="#cite_note-plugins.jquery.com-18"><span>[</span>18<span>]</span></a></sup> that cover a wide range of functionality such as Ajax helpers, <a href="http://en.wikipedia.org/wiki/Web_service" title="Web service">web services</a>, datagrids, dynamic lists, <a href="http://en.wikipedia.org/wiki/XML" title="XML">XML</a> and <a href="http://en.wikipedia.org/wiki/XSLT" title="XSLT">XSLT</a> tools, <a href="http://en.wikipedia.org/wiki/Drag_and_drop" title="Drag and drop">drag and drop</a>, events, <a href="http://en.wikipedia.org/wiki/HTTP_cookie" title="HTTP cookie">cookie</a> handling, and <a href="http://en.wikipedia.org/wiki/Modal_window" title="Modal window">modal windows</a>.</p>
+<p>An important source of jQuery plug-ins is the plugins subdomain of the jQuery Project website.<sup id="cite_ref-plugins.jquery.com_18-1" class="reference"><a href="#cite_note-plugins.jquery.com-18"><span>[</span>18<span>]</span></a></sup> However, in an effort to rid the site of spam, the plugins in this subdomain were accidentally deleted in December 2011.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19"><span>[</span>19<span>]</span></a></sup> The new site will include a <a href="http://en.wikipedia.org/wiki/GitHub" title="GitHub">GitHub</a>-hosted repository, which will require developers to resubmit their plugins and to conform to new submission requirements.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20"><span>[</span>20<span>]</span></a></sup> There are alternative plug-in search engines<sup id="cite_ref-21" class="reference"><a href="#cite_note-21"><span>[</span>21<span>]</span></a></sup><sup id="cite_ref-jquery_plugin_22-0" class="reference"><a href="#cite_note-jquery_plugin-22"><span>[</span>22<span>]</span></a></sup> like <a rel="nofollow" class="external text" href="http://jquer.in/">jquer.in</a>
+ that take more specialized approaches, such as listing only plug-ins 
+that meet certain criteria (e.g. those that have a public code 
+repository). jQuery provides a "Learning Center" which can help users 
+understand JavaScript and get started developing jQuery plugins.<sup id="cite_ref-23" class="reference"><a href="#cite_note-23"><span>[</span>23<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Release_history">Release history</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=edit&amp;section=6" title="Edit section: Release history">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable sortable jquery-tablesorter">
+<thead><tr>
+<th title="Sort ascending" role="columnheader button" tabindex="0" class="headerSort">Version number</th>
+<th title="Sort ascending" role="columnheader button" tabindex="0" class="headerSort">Release date</th>
+<th title="Sort ascending" role="columnheader button" tabindex="0" class="headerSort">Latest update</th>
+<th title="Sort ascending" role="columnheader button" tabindex="0" class="headerSort">Size Prod (KB)</th>
+<th title="Sort ascending" role="columnheader button" tabindex="0" class="headerSort">Additional notes</th>
+</tr></thead><tbody>
+<tr>
+<td>1.0</td>
+<td><a rel="nofollow" class="external text" href="http://blog.jquery.com/2006/08/26/jquery-10/">August&nbsp;26,&nbsp;2006<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2006-08-26</span>)</span></a></td>
+<td></td>
+<td></td>
+<td>First stable release</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td><a rel="nofollow" class="external text" href="http://blog.jquery.com/2007/01/14/jquery-birthday-11-new-site-new-docs/">January&nbsp;14,&nbsp;2007<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2007-01-14</span>)</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1.2</td>
+<td><a rel="nofollow" class="external text" href="http://blog.jquery.com/2007/09/10/jquery-12-jqueryextendawesome/">September&nbsp;10,&nbsp;2007<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2007-09-10</span>)</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1.3</td>
+<td><a rel="nofollow" class="external text" href="http://blog.jquery.com/2009/01/14/jquery-13-and-the-jquery-foundation/">January&nbsp;14,&nbsp;2009<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2009-01-14</span>)</span></a></td>
+<td></td>
+<td>55.9</td>
+<td>Sizzle Selector Engine introduced into core</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td><a rel="nofollow" class="external text" href="http://blog.jquery.com/2010/01/14/jquery-14-released/">January&nbsp;14,&nbsp;2010<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2010-01-14</span>)</span></a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1.5</td>
+<td><a rel="nofollow" class="external text" href="http://blog.jquery.com/2011/01/31/jquery-15-released/">January&nbsp;31,&nbsp;2011<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2011-01-31</span>)</span></a></td>
+<td></td>
+<td></td>
+<td>Deferred callback management, ajax module rewrite</td>
+</tr>
+<tr>
+<td>1.6</td>
+<td><a rel="nofollow" class="external text" href="http://blog.jquery.com/2011/05/03/jquery-16-released/">May&nbsp;3,&nbsp;2011<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2011-05-03</span>)</span></a></td>
+<td></td>
+<td></td>
+<td>Significant performance improvements to the attr() and val() functions</td>
+</tr>
+<tr>
+<td>1.7</td>
+<td><a rel="nofollow" class="external text" href="http://blog.jquery.com/2011/11/03/jquery-1-7-released/">November&nbsp;3,&nbsp;2011<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2011-11-03</span>)</span></a></td>
+<td></td>
+<td></td>
+<td>New Event APIs: .on() and .off(), while the old APIs are still supported.</td>
+</tr>
+<tr>
+<td>1.8</td>
+<td><a rel="nofollow" class="external text" href="http://blog.jquery.com/2012/08/09/jquery-1-8-released/">August&nbsp;9,&nbsp;2012<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2012-08-09</span>)</span></a></td>
+<td></td>
+<td>91.4</td>
+<td>Sizzle Selector Engine rewritten, improved animations and $(html, props) flexibility.</td>
+</tr>
+<tr>
+<td>1.9</td>
+<td><a rel="nofollow" class="external text" href="http://blog.jquery.com/2013/01/15/jquery-1-9-final-jquery-2-0-beta-migrate-final-released/">January&nbsp;15,&nbsp;2013<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2013-01-15</span>)</span></a></td>
+<td>1.9.1 (February&nbsp;4,&nbsp;2013<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2013-02-04</span>)</span>)<sup id="cite_ref-24" class="reference"><a href="#cite_note-24"><span>[</span>24<span>]</span></a></sup></td>
+<td></td>
+<td>Removal of deprecated interfaces and code cleanup</td>
+</tr>
+<tr>
+<td>1.10</td>
+<td><a rel="nofollow" class="external text" href="http://blog.jquery.com/2013/05/24/jquery-1-10-0-and-2-0-1-released/">May&nbsp;24,&nbsp;2013<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2013-05-24</span>)</span></a></td>
+<td>1.10.2 (July&nbsp;3,&nbsp;2013<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2013-07-03</span>)</span>)</td>
+<td></td>
+<td>Incorporated bug fixes and differences reported from both the 1.9 and 2.0 beta cycles</td>
+</tr>
+<tr>
+<td>1.11</td>
+<td><a rel="nofollow" class="external text" href="http://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/">January&nbsp;24,&nbsp;2014<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2014-01-24</span>)</span></a></td>
+<td>1.11.1 (May&nbsp;1,&nbsp;2014<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2014-05-01</span>)</span>)</td>
+<td>93.5</td>
+<td></td>
+</tr>
+<tr>
+<td>2.0</td>
+<td><a rel="nofollow" class="external text" href="http://blog.jquery.com/2013/04/18/jquery-2-0-released/">April&nbsp;18,&nbsp;2013<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2013-04-18</span>)</span></a></td>
+<td>2.0.3 (July&nbsp;3,&nbsp;2013<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2013-07-03</span>)</span>)</td>
+<td>81.1</td>
+<td>Dropped IE 6–8 support for performance improvements and reduction in filesize</td>
+</tr>
+<tr>
+<td>2.1</td>
+<td><a rel="nofollow" class="external text" href="http://blog.jquery.com/2014/01/24/jquery-1-11-and-2-1-released/">January&nbsp;24,&nbsp;2014<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2014-01-24</span>)</span></a></td>
+<td>2.1.1 (May&nbsp;1,&nbsp;2014<span style="display:none">&nbsp;(<span class="bday dtstart published updated">2014-05-01</span>)</span>)</td>
+<td>82.2</td>
+<td></td>
+</tr>
+</tbody><tfoot></tfoot></table>
+<h2><span class="mw-headline" id="Testing_framework">Testing framework</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=edit&amp;section=7" title="Edit section: Testing framework">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="http://en.wikipedia.org/wiki/QUnit" title="QUnit">QUnit</a> is a <a href="http://en.wikipedia.org/wiki/Test_automation_framework" title="Test automation framework" class="mw-redirect">test automation framework</a> used to test the jQuery project. The jQuery team developed it as an in-house unit testing library.<sup id="cite_ref-qunit-history_25-0" class="reference"><a href="#cite_note-qunit-history-25"><span>[</span>25<span>]</span></a></sup>
+ The jQuery team uses it to test its code and plugins but it can test 
+any generic JavaScript code, including server-side JavaScript code.<sup id="cite_ref-qunit-history_25-1" class="reference"><a href="#cite_note-qunit-history-25"><span>[</span>25<span>]</span></a></sup></p>
+<p>As of 2011, the jQuery Testing Team uses <a href="http://en.wikipedia.org/wiki/QUnit" title="QUnit">QUnit</a> with <a href="http://en.wikipedia.org/w/index.php?title=TestSwarm&amp;action=edit&amp;redlink=1" class="new" title="TestSwarm (page does not exist)">TestSwarm</a> to test each jQuery codebase release.<sup id="cite_ref-26" class="reference"><a href="#cite_note-26"><span>[</span>26<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=edit&amp;section=8" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="noprint tright portal" style="border:solid #aaa 1px;margin:0.5em 0 0.5em 1em;">
+<table style="background:#f9f9f9;font-size:85%;line-height:110%;max-width:175px;">
+<tbody><tr valign="middle">
+<td style="text-align:center;"><a href="http://en.wikipedia.org/wiki/File:Free_and_open-source_software_logo_%282009%29.svg" class="image"><img alt="Portal icon" src="images/28px-Free_and_open-source_software_logo_2009.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/42px-Free_and_open-source_software_logo_%282009%29.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Free_and_open-source_software_logo_%282009%29.svg/56px-Free_and_open-source_software_logo_%282009%29.svg.png 2x" data-file-width="512" data-file-height="512" height="28" width="28"></a></td>
+<td style="padding:0 0.2em;vertical-align:middle;font-style:italic;font-weight:bold;"><a href="http://en.wikipedia.org/wiki/Portal:Free_software" title="Portal:Free software">Free software portal</a></td>
+</tr>
+</tbody></table>
+</div>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Comparison_of_JavaScript_frameworks" title="Comparison of JavaScript frameworks">Comparison of JavaScript frameworks</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JQuery_UI" title="JQuery UI">jQuery UI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JQuery_Mobile" title="JQuery Mobile">jQuery Mobile</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=edit&amp;section=9" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-count references-column-count-2" style="-moz-column-count: 2; -webkit-column-count: 2; column-count: 2; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-jqorg-license-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-jqorg-license_1-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-jqorg-license_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://jquery.org/license/">"License - jQuery Project"</a>. jQuery Foundation<span class="reference-accessdate">. Retrieved 2014-07-02</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.btitle=License+-+jQuery+Project&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fjquery.org%2Flicense%2F&amp;rft.pub=jQuery+Foundation&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-jquery.com-2"><span class="mw-cite-backlink"><b><a href="#cite_ref-jquery.com_2-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://jquery.com/">"jQuery: The write less, do more, JavaScript library"</a>. The jQuery Project<span class="reference-accessdate">. Retrieved 29 April 2010</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.btitle=jQuery%3A+The+write+less%2C+do+more%2C+JavaScript+library&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fjquery.com%2F&amp;rft.pub=The+jQuery+Project&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-3"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.similartech.com/categories/javascript">"JavaScript libraries usage statistics"</a>, Analysis by SimilarTech</span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://trends.builtwith.com/javascript/JQuery">"jQuery Usage Statistics"</a><span class="reference-accessdate">. Retrieved 2013-05-17</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.btitle=jQuery+Usage+Statistics&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Ftrends.builtwith.com%2Fjavascript%2FJQuery&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-5"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://w3techs.com/technologies/overview/javascript_library/all">"Usage of JavaScript libraries for websites"</a>. W3Techs<span class="reference-accessdate">. Retrieved 2010-07-08</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.btitle=Usage+of+JavaScript+libraries+for+websites&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fw3techs.com%2Ftechnologies%2Foverview%2Fjavascript_library%2Fall&amp;rft.pub=W3Techs&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-6"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">"<a rel="nofollow" class="external text" href="http://www.w3.org/TR/selectors-api/#queryselector">Selectors API Level 1, W3C Recommendation</a>"
+ (21 February 2013). This standard turned what was jQuery "helper 
+methods" into Javascript-native ones, and the wide use of jQuery 
+stimulated the <a rel="nofollow" class="external text" href="http://caniuse.com/queryselector">fast adption</a> of <tt>querySelector/querySelectorAll</tt> into main web-browsers.</span></li>
+<li id="cite_note-2008-09-28-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-2008-09-28_7-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Resig, John (2008-09-28). <a rel="nofollow" class="external text" href="http://jquery.com/blog/2008/09/28/jquery-microsoft-nokia/">"jQuery, Microsoft, and Nokia"</a>. <i>jQuery Blog</i>. jQuery<span class="reference-accessdate">. Retrieved 2009-01-29</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.atitle=jQuery%2C+Microsoft%2C+and+Nokia&amp;rft.aufirst=John&amp;rft.aulast=Resig&amp;rft.au=Resig%2C+John&amp;rft.date=2008-09-28&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fjquery.com%2Fblog%2F2008%2F09%2F28%2Fjquery-microsoft-nokia%2F&amp;rft.jtitle=jQuery+Blog&amp;rft.pub=jQuery&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Guthrie, Scott (2008-09-28). <a rel="nofollow" class="external text" href="http://weblogs.asp.net/scottgu/archive/2008/09/28/jquery-and-microsoft.aspx">"jQuery and Microsoft"</a>. <i>ScottGu's Blog</i><span class="reference-accessdate">. Retrieved 2009-01-29</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.atitle=jQuery+and+Microsoft&amp;rft.aufirst=Scott&amp;rft.au=Guthrie%2C+Scott&amp;rft.aulast=Guthrie&amp;rft.date=2008-09-28&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fweblogs.asp.net%2Fscottgu%2Farchive%2F2008%2F09%2F28%2Fjquery-and-microsoft.aspx&amp;rft.jtitle=ScottGu%27s+Blog&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://wiki.forum.nokia.com/index.php/Guarana_UI:_a_jQuery-Based_UI_Library_for_Nokia_WRT">"Guarana UI: A jQuery Based UI Library for Nokia WRT"</a>. <i>Forum Nokia</i><span class="reference-accessdate">. Retrieved 2010-03-30</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.atitle=Guarana+UI%3A+A+jQuery+Based+UI+Library+for+Nokia+WRT&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwiki.forum.nokia.com%2Findex.php%2FGuarana_UI%3A_a_jQuery-Based_UI_Library_for_Nokia_WRT&amp;rft.jtitle=Forum+Nokia&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a class="external text" href="http://www.mediawiki.org/wiki/JQuery">"jQuery"</a>. MediaWiki. January 19, 2012<span class="reference-accessdate">. Retrieved March 11, 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.btitle=jQuery&amp;rft.date=January+19%2C+2012&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.mediawiki.org%2Fwiki%2FJQuery&amp;rft.pub=MediaWiki&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Resig, John (2009-01-14). <a rel="nofollow" class="external text" href="http://blog.jquery.com/2009/01/14/jquery-13-and-the-jquery-foundation/">"jQuery 1.3 and the jQuery Foundation"</a>. <i>jQuery Blog</i><span class="reference-accessdate">. Retrieved 2009-05-04</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.atitle=jQuery+1.3+and+the+jQuery+Foundation&amp;rft.aufirst=John&amp;rft.aulast=Resig&amp;rft.au=Resig%2C+John&amp;rft.date=2009-01-14&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fblog.jquery.com%2F2009%2F01%2F14%2Fjquery-13-and-the-jquery-foundation%2F&amp;rft.jtitle=jQuery+Blog&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://jquery.com/browser-support/">Browser Support | jQuery</a></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">"jQuery CDN" – <a rel="nofollow" class="external free" href="http://code.jquery.com/">http://code.jquery.com/</a></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://github.com/jquery/jquery.com/pull/43">"replace (mt) with maxcdn on pages/download.md"</a>. August 7, 2013<span class="reference-accessdate">. Retrieved December 6, 2013</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.btitle=replace+%28mt%29+with+maxcdn+on+pages%2Fdownload.md&amp;rft.date=August+7%2C+2013&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fgithub.com%2Fjquery%2Fjquery.com%2Fpull%2F43&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://blog.jquery.com/2008/11/19/cloudfront-cdn-for-jquery/">"CloudFront CDN for jQuery"</a>, November 19th, 2008 by John Resig, blog.jquery.com</span></li>
+<li id="cite_note-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-16"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://code.google.com/apis/ajaxlibs/documentation/#jquery">"Google Libraries API - Developer's Guide"</a>. code.google.com<span class="reference-accessdate">. Retrieved March 11, 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.btitle=Google+Libraries+API+-+Developer%27s+Guide&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fcode.google.com%2Fapis%2Fajaxlibs%2Fdocumentation%2F%23jquery&amp;rft.pub=code.google.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.asp.net/ajaxlibrary/cdn.ashx">"Microsoft Ajax Content Delivery Network"</a>. <i>ASP.net</i>. Microsoft Corporation<span class="reference-accessdate">. Retrieved June 19, 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.atitle=Microsoft+Ajax+Content+Delivery+Network&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.asp.net%2Fajaxlibrary%2Fcdn.ashx&amp;rft.jtitle=ASP.net&amp;rft.pub=Microsoft+Corporation&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-plugins.jquery.com-18"><span class="mw-cite-backlink">^ <a href="#cite_ref-plugins.jquery.com_18-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-plugins.jquery.com_18-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://plugins.jquery.com/">"Plugins"</a>. The jQuery Project<span class="reference-accessdate">. Retrieved 26 August 2010</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.btitle=Plugins&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fplugins.jquery.com%2F&amp;rft.pub=The+jQuery+Project&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://blog.jquery.com/2011/12/08/what-is-happening-to-the-jquery-plugins-site/#pluginstldr">http://blog.jquery.com/2011/12/08/what-is-happening-to-the-jquery-plugins-site/#pluginstldr</a></span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="https://github.com/jquery/plugins.jquery.com">https://github.com/jquery/plugins.jquery.com</a></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.jqueryplugins.com/search/?q=/">"jQuery Plugins Search"</a><span class="reference-accessdate">. Retrieved 13 September 2012</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.btitle=jQuery+Plugins+Search&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.jqueryplugins.com%2Fsearch%2F%3Fq%3D%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-jquery_plugin-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-jquery_plugin_22-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Kanakiya, Jay. <a rel="nofollow" class="external text" href="http://jquer.in/">"jquery plugins"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.aufirst=Jay&amp;rft.au=Kanakiya%2C+Jay&amp;rft.aulast=Kanakiya&amp;rft.btitle=jquery+plugins&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fjquer.in&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://learn.jquery.com/">"jQuery Learning Center"</a>. jQuery Foundation<span class="reference-accessdate">. Retrieved 2014-07-02</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.btitle=jQuery+Learning+Center&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Flearn.jquery.com%2F&amp;rft.pub=jQuery+Foundation&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://blog.jquery.com/2013/02/04/jquery-1-9-1-released">http://blog.jquery.com/2013/02/04/jquery-1-9-1-released</a></span></li>
+<li id="cite_note-qunit-history-25"><span class="mw-cite-backlink">^ <a href="#cite_ref-qunit-history_25-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-qunit-history_25-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://qunitjs.com/#History">"History"</a>. <i>qunitjs.com</i><span class="reference-accessdate">. Retrieved 2014-07-02</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.atitle=History&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fqunitjs.com%2F%23History&amp;rft.jtitle=qunitjs.com&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&nbsp;</span></span></span></li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text">jQuery Testing Team Wiki <a rel="nofollow" class="external free" href="http://jquerytesting.pbworks.com/w/page/41556026/FrontPage">http://jquerytesting.pbworks.com/w/page/41556026/FrontPage</a></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="Further_reading">Further reading</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=edit&amp;section=10" title="Edit section: Further reading">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="refbegin" style="">
+<ul>
+<li><span class="citation web">Taft, Darryl K. (2006-08-30). <a rel="nofollow" class="external text" href="http://www.eweek.com/c/a/Application-Development/jQuery-Eases-JavaScript-AJAX-Development/">"jQuery Eases JavaScript, AJAX Development"</a>. <i><a href="http://en.wikipedia.org/wiki/EWeek" title="EWeek">eWeek</a></i><span class="reference-accessdate">. Retrieved 2009-05-04</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.atitle=jQuery+Eases+JavaScript%2C+AJAX+Development&amp;rft.aufirst=Darryl+K.&amp;rft.aulast=Taft&amp;rft.au=Taft%2C+Darryl+K.&amp;rft.date=2006-08-30&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.eweek.com%2Fc%2Fa%2FApplication-Development%2FjQuery-Eases-JavaScript-AJAX-Development%2F&amp;rft.jtitle=eWeek&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&nbsp;</span></span></li>
+<li><span class="citation web">Krill, Paul (2006-08-31). <a rel="nofollow" class="external text" href="http://www.infoworld.com/d/developer-world/javascript-net-developers-aided-in-separate-projects-531">"JavaScript, .Net developers aided in separate project"</a>. <i><a href="http://en.wikipedia.org/wiki/InfoWorld" title="InfoWorld">InfoWorld</a></i><span class="reference-accessdate">. Retrieved 2009-05-04</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.atitle=JavaScript%2C+.Net+developers+aided+in+separate+project&amp;rft.aufirst=Paul&amp;rft.au=Krill%2C+Paul&amp;rft.aulast=Krill&amp;rft.date=2006-08-31&amp;rft.genre=article&amp;rft_id=http%3A%2F%2Fwww.infoworld.com%2Fd%2Fdeveloper-world%2Fjavascript-net-developers-aided-in-separate-projects-531&amp;rft.jtitle=InfoWorld&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&nbsp;</span></span></li>
+<li><span class="citation audio-visual">John Resig (speaker) (2007-04-13). <a rel="nofollow" class="external text" href="http://video.yahoo.com/watch/410472/2391234"><i>Advancing JavaScript with Libraries (Part 1)</i></a> (Yahoo! Video). YUI Theater<span class="reference-accessdate">. Retrieved 2009-05-04</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.btitle=Advancing+JavaScript+with+Libraries+%28Part+1%29&amp;rft.date=2007-04-13&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fvideo.yahoo.com%2Fwatch%2F410472%2F2391234&amp;rft.pub=YUI+Theater&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></li>
+<li><span class="citation audio-visual">John Resig (speaker) (2007-04-13). <a rel="nofollow" class="external text" href="http://video.yahoo.com/watch/412541/2395771"><i>Advancing JavaScript with Libraries (Part 2)</i></a> (Yahoo! Video). YUI Theater<span class="reference-accessdate">. Retrieved 2009-05-04</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AJQuery&amp;rft.btitle=Advancing+JavaScript+with+Libraries+%28Part+2%29&amp;rft.date=2007-04-13&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fvideo.yahoo.com%2Fwatch%2F412541%2F2395771&amp;rft.pub=YUI+Theater&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&nbsp;</span></span></li>
+</ul>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=edit&amp;section=11" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="mbox-small plainlinks" style="border:1px solid #aaa;background-color:#f9f9f9;">
+<tbody><tr>
+<td class="mbox-image"><img alt="" src="images/30px-Commons-logo.png" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" height="40" width="30"></td>
+<td class="mbox-text plainlist">Wikimedia Commons has media related to <i><b><a href="http://commons.wikimedia.org/wiki/Category:JQuery" class="extiw" title="commons:Category:JQuery">JQuery</a></b></i>.</td>
+</tr>
+</tbody></table>
+<ul>
+<li><span class="official website"><span class="url"><a rel="nofollow" class="external text" href="http://jquery.com/">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="http://api.jquery.com/">API Reference</a></li>
+<li><a rel="nofollow" class="external text" href="http://jqueryui.com/">jQuery UI</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.youtube.com/watch?v=8mwKq7_JlS8">Dmitri Gaskin Google Tech Talk on YouTube, 2008</a></li>
+</ul>
+<table class="navbox" style="border-spacing:0;" cellspacing="0">
+<tbody><tr>
+<td style="padding:2px;">
+<table id="collapsibleTable0" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;" cellspacing="0">
+<tbody><tr>
+<th scope="col" class="navbox-title" colspan="2"><span class="collapseButton">[<a href="#" id="collapseButton0">show</a>]</span>
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:ECMAScript" title="Template:ECMAScript"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:ECMAScript" title="Template talk:ECMAScript"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:ECMAScript&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="http://en.wikipedia.org/wiki/ECMAScript" title="ECMAScript">ECMAScript</a></div>
+</th>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group">Dialects</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/ActionScript" title="ActionScript">ActionScript</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Caja_project" title="Caja project">Caja</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/JavaScript_engine" title="JavaScript engine">engines</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Asm.js" title="Asm.js">asm.js</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/JScript" title="JScript">JScript</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JScript_.NET" title="JScript .NET">JScript .NET</a></li>
+<li><a href="http://en.wikipedia.org/wiki/QtScript" title="QtScript">QtScript</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WMLScript" title="WMLScript">WMLScript</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/List_of_ECMAScript_engines" title="List of ECMAScript engines">Engines</a><br>
+(<a href="http://en.wikipedia.org/wiki/Comparison_of_layout_engines_%28ECMAScript%29" title="Comparison of layout engines (ECMAScript)">comparison</a>)</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Presto_%28layout_engine%29#JavaScript_engines" title="Presto (layout engine)">Carakan</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Presto_%28layout_engine%29#JavaScript_engines" title="Presto (layout engine)">Futhark</a></li>
+<li><a href="http://en.wikipedia.org/wiki/InScript_%28JavaScript_engine%29" title="InScript (JavaScript engine)">InScript</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JavaScriptCore" title="JavaScriptCore" class="mw-redirect">JavaScriptCore</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/WebKit#JavaScriptCore" title="WebKit">SquirrelFish</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/JScript" title="JScript">JScript</a></li>
+<li><a href="http://en.wikipedia.org/wiki/KJS_%28KDE%29" title="KJS (KDE)" class="mw-redirect">KJS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Presto_%28layout_engine%29#JavaScript_engines" title="Presto (layout engine)">Linear B</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Narcissus_%28JavaScript_engine%29" title="Narcissus (JavaScript engine)">Narcissus</a></li>
+<li><a href="http://en.wikipedia.org/wiki/QtScript" title="QtScript">QtScript</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rhino_%28JavaScript_engine%29" title="Rhino (JavaScript engine)">Rhino</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=YAJI&amp;action=edit&amp;redlink=1" class="new" title="YAJI (page does not exist)">YAJI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SpiderMonkey_%28JavaScript_engine%29" title="SpiderMonkey (JavaScript engine)" class="mw-redirect">SpiderMonkey</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/SpiderMonkey_%28JavaScript_engine%29#TraceMonkey" title="SpiderMonkey (JavaScript engine)" class="mw-redirect">TraceMonkey</a></li>
+<li><a href="http://en.wikipedia.org/wiki/J%C3%A4gerMonkey" title="JägerMonkey" class="mw-redirect">JägerMonkey</a></li>
+</ul>
+</li>
+<li><a href="http://en.wikipedia.org/wiki/Tamarin_%28software%29" title="Tamarin (software)">Tamarin</a></li>
+<li><a href="http://en.wikipedia.org/wiki/V8_%28JavaScript_engine%29" title="V8 (JavaScript engine)">V8</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29" title="Chakra (JScript engine)">Chakra</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Jurassic_%28software%29&amp;action=edit&amp;redlink=1" class="new" title="Jurassic (software) (page does not exist)">Jurassic</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JScript_.NET" title="JScript .NET">JScript .NET</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Jint&amp;action=edit&amp;redlink=1" class="new" title="Jint (page does not exist)">Jint</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Nashorn_%28JavaScript_engine%29" title="Nashorn (JavaScript engine)">Nashorn</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group">Frameworks,<br>
+libraries</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0;" cellspacing="0">
+<tbody><tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/List_of_JavaScript_libraries" title="List of JavaScript libraries">JavaScript</a><br>
+(<a href="http://en.wikipedia.org/wiki/Comparison_of_JavaScript_frameworks" title="Comparison of JavaScript frameworks">comparison</a>)</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0;" cellspacing="0">
+<tbody><tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Client-side_JavaScript" title="Client-side JavaScript" class="mw-redirect">Client-side</a><br>
+(<a href="http://en.wikipedia.org/wiki/List_of_Ajax_frameworks#JavaScript" title="List of Ajax frameworks">list, Ajax frameworks</a>)</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Ample_SDK" title="Ample SDK">Ample SDK</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Web_Atoms&amp;action=edit&amp;redlink=1" class="new" title="Web Atoms (page does not exist)">Atoms.js</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Chaplin.js" title="Chaplin.js">Chaplin.js</a></li>
+<li><a href="http://en.wikipedia.org/wiki/CougarXML" title="CougarXML">CougarXML</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dojo_Toolkit" title="Dojo Toolkit">Dojo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Echo_%28framework%29" title="Echo (framework)">Echo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ext_JS" title="Ext JS">Ext JS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">Google Web Toolkit</a></li>
+<li><strong class="selflink">jQuery</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Lively_Kernel" title="Lively Kernel">Lively Kernel</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Midori_JavaScript_Framework" title="Midori JavaScript Framework">midori</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MochiKit" title="MochiKit">MochiKit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MooTools" title="MooTools">MooTools</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Prototype_JavaScript_Framework" title="Prototype JavaScript Framework">Prototype</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pyjamas_%28software%29" title="Pyjamas (software)">Pyjamas</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Qooxdoo" title="Qooxdoo">qooxdoo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rialto_Toolkit" title="Rialto Toolkit">Rialto</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rico_%28Ajax%29" title="Rico (Ajax)">Rico</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Script.aculo.us" title="Script.aculo.us">script.aculo.us</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SmartClient" title="SmartClient">SmartClient</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SproutCore" title="SproutCore">SproutCore</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Spry_framework" title="Spry framework">Spry</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Wakanda_%28software%29" title="Wakanda (software)">Wakanda Framework</a></li>
+<li><a href="http://en.wikipedia.org/wiki/YUI_Library" title="YUI Library">YUI Library</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Server-side_JavaScript" title="Server-side JavaScript" class="mw-redirect">Server-side</a><br>
+(<a href="http://en.wikipedia.org/wiki/Comparison_of_server-side_JavaScript_solutions" title="Comparison of server-side JavaScript solutions">comparison</a>)</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/AppJet" title="AppJet">AppJet</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Jaxer#Aptana_Jaxer" title="Jaxer" class="mw-redirect">Jaxer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Node.js" title="Node.js">Node.js</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Wakanda_%28software%29" title="Wakanda (software)">WakandaDB</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/JavaScript_library" title="JavaScript library">Libraries</a><br>
+(<a href="http://en.wikipedia.org/wiki/List_of_JavaScript_libraries" title="List of JavaScript libraries">list</a>)</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Backbone.js" title="Backbone.js">Backbone</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SWFObject" title="SWFObject">SWFObject</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SWFAddress" title="SWFAddress">SWFAddress</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Underscore.js" title="Underscore.js">Underscore</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">ActionScript</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/PureMVC" title="PureMVC">PureMVC</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Multiple<br>
+implementations</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Cappuccino_%28application_development_framework%29" title="Cappuccino (application development framework)">Cappuccino</a>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Objective-J" title="Objective-J">Objective-J</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group">People</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Brendan_Eich" title="Brendan Eich">Brendan Eich</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Douglas_Crockford" title="Douglas Crockford">Douglas Crockford</a></li>
+<li><a href="http://en.wikipedia.org/wiki/John_Resig" title="John Resig">John Resig</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Scott_Isaacs" title="Scott Isaacs">Scott Isaacs</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group">Other</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Dynamic_HTML" title="Dynamic HTML">DHTML</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ecma_International" title="Ecma International">Ecma International</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JSDoc" title="JSDoc">JSDoc</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JSGI" title="JSGI">JSGI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JSHint" title="JSHint">JSHint</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JSLint" title="JSLint">JSLint</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JSON" title="JSON">JSON</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JavaScript_Style_Sheets" title="JavaScript Style Sheets">JSSS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sputnik_%28JavaScript_conformance_test%29" title="Sputnik (JavaScript conformance test)">Sputnik</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Browser_speed_test#SunSpider" title="Browser speed test">SunSpider</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Asynchronous_module_definition" title="Asynchronous module definition">Asynchronous module definition</a></li>
+<li><a href="http://en.wikipedia.org/wiki/CommonJS" title="CommonJS">CommonJS</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<table class="navbox" style="border-spacing:0;" cellspacing="0">
+<tbody><tr>
+<td style="padding:2px;">
+<table id="collapsibleTable1" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;" cellspacing="0">
+<tbody><tr>
+<th scope="col" class="navbox-title" colspan="2"><span class="collapseButton">[<a href="#" id="collapseButton1">show</a>]</span>
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Application_frameworks" title="Template:Application frameworks"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Application_frameworks" title="Template talk:Application frameworks"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Application_frameworks&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks" title="Comparison of web application frameworks">Web application frameworks</a></div>
+</th>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/ASP.NET" title="ASP.NET">ASP.NET</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/ASP.NET_Dynamic_Data" title="ASP.NET Dynamic Data">ASP.NET Dynamic Data</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=SageFrame&amp;action=edit&amp;redlink=1" class="new" title="SageFrame (page does not exist)">SageFrame</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ASP.NET_MVC_Framework" title="ASP.NET MVC Framework">ASP.NET MVC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ASP.NET" title="ASP.NET">ASP.NET Web Forms</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Base_One_Foundation_Component_Library" title="Base One Foundation Component Library">BFC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/DotNetNuke" title="DotNetNuke">DotNetNuke</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MonoRail_%28software%29" title="MonoRail (software)">MonoRail</a></li>
+<li><a href="http://en.wikipedia.org/wiki/OpenRasta" title="OpenRasta">OpenRasta</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Umbraco" title="Umbraco">Umbraco</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/ColdFusion" title="ColdFusion" class="mw-redirect">ColdFusion</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/ColdBox_Platform" title="ColdBox Platform">ColdBox Platform</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ColdSpring_Framework" title="ColdSpring Framework">ColdSpring</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fusebox_%28programming%29" title="Fusebox (programming)">Fusebox</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mach-II" title="Mach-II">Mach-II</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Model-Glue" title="Model-Glue">Model-Glue</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=OnTap&amp;action=edit&amp;redlink=1" class="new" title="OnTap (page does not exist)">onTap</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ColdFusion_on_Wheels" title="ColdFusion on Wheels">on Wheels</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/CL-HTTP" title="CL-HTTP">CL-HTTP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/UnCommon_Web" title="UnCommon Web">UnCommon Web</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Weblocks" title="Weblocks">Weblocks</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/C%2B%2B" title="C++">C++</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/CppCMS" title="CppCMS">CppCMS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Wt_%28web_toolkit%29" title="Wt (web toolkit)">Wt</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Haskell_%28programming_language%29" title="Haskell (programming language)">Haskell</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Happstack" title="Happstack">Happstack</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Yesod_%28web_framework%29" title="Yesod (web framework)">Yesod</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Snap_%28web_framework%29" title="Snap (web framework)">Snap</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Java_%28programming_language%29" title="Java (programming language)">Java</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/AppFuse" title="AppFuse">AppFuse</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Flexive" title="Flexive">Flexive</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Grails_%28framework%29" title="Grails (framework)">Grails</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">GWT</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ICEfaces" title="ICEfaces">ICEfaces</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ItsNat" title="ItsNat">ItsNat</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JavaServer_Faces" title="JavaServer Faces">JavaServer Faces</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Jspx-bay" title="Jspx-bay">Jspx</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Juzu_Web_Framework" title="Juzu Web Framework">Juzu</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Makumba_%28framework%29" title="Makumba (framework)">Makumba</a></li>
+<li><a href="http://en.wikipedia.org/wiki/OpenXava" title="OpenXava">OpenXava</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Play_Framework" title="Play Framework" class="mw-redirect">Play</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rich_AJAX_Platform" title="Rich AJAX Platform" class="mw-redirect">Eclipse RAP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Reasonable_Server_Faces" title="Reasonable Server Faces">Reasonable Server Faces</a></li>
+<li><a href="http://en.wikipedia.org/wiki/RIFE" title="RIFE">RIFE</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JBoss_Seam" title="JBoss Seam">Seam</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Spring_Framework#Model-view-controller_framework" title="Spring Framework">Spring</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Stripes_%28framework%29" title="Stripes (framework)">Stripes</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Apache_Struts" title="Apache Struts">Struts</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Apache_Tapestry" title="Apache Tapestry">Tapestry</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Vaadin" title="Vaadin">Vaadin</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WebWork" title="WebWork">WebWork</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Apache_Wicket" title="Apache Wicket">Wicket</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WaveMaker" title="WaveMaker">WaveMaker</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ZK_%28framework%29" title="ZK (framework)">ZK</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Ample_SDK" title="Ample SDK">Ample SDK</a></li>
+<li><a href="http://en.wikipedia.org/wiki/AngularJS" title="AngularJS">AngularJS</a></li>
+<li><a href="http://en.wikipedia.org/w/index.php?title=Web_Atoms&amp;action=edit&amp;redlink=1" class="new" title="Web Atoms (page does not exist)">Atoms.js</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Backbone.js" title="Backbone.js">Backbone.js</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Chaplin.js" title="Chaplin.js">Chaplin.js</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Google_Closure_Tools" title="Google Closure Tools">Closure</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dojo_Toolkit" title="Dojo Toolkit">Dojo Toolkit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ember.js" title="Ember.js">Ember.js</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ext_JS" title="Ext JS">Ext JS</a></li>
+<li><strong class="selflink">jQuery</strong></li>
+<li><a href="http://en.wikipedia.org/wiki/Meteor_%28web_framework%29" title="Meteor (web framework)">Meteor</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Prototype_JavaScript_Framework" title="Prototype JavaScript Framework">Prototype</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rico_%28Ajax%29" title="Rico (Ajax)">Rico</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Script.aculo.us" title="Script.aculo.us">script.aculo.us</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sencha_Touch" title="Sencha Touch">Sencha Touch</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SproutCore" title="SproutCore">SproutCore</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Perl" title="Perl">Perl</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Catalyst_%28software%29" title="Catalyst (software)">Catalyst</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Dancer_%28software%29" title="Dancer (software)">Dancer</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mason_%28Perl%29" title="Mason (Perl)">Mason</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Maypole_framework" title="Maypole framework">Maypole</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Mojolicious" title="Mojolicious">Mojolicious</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WebGUI" title="WebGUI">WebGUI</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/PHP" title="PHP">PHP</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/AppFlower" title="AppFlower">AppFlower</a></li>
+<li><a href="http://en.wikipedia.org/wiki/CakePHP" title="CakePHP">CakePHP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/CodeIgniter" title="CodeIgniter">CodeIgniter</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Drupal" title="Drupal">Drupal</a></li>
+<li><a href="http://en.wikipedia.org/wiki/EZ_Publish" title="EZ Publish">eZ Publish</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fat-Free_Framework" title="Fat-Free Framework">Fat-Free</a></li>
+<li><a href="http://en.wikipedia.org/wiki/FuelPHP" title="FuelPHP">FuelPHP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Horde_%28software%29" title="Horde (software)">Horde</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Joomla" title="Joomla">Joomla!</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Laravel_%28framework%29" title="Laravel (framework)" class="mw-redirect">Laravel</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lithium_%28PHP_framework%29" title="Lithium (PHP framework)">Lithium</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Midgard_%28software%29" title="Midgard (software)">Midgard</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MODX" title="MODX">MODX</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Nette_Framework" title="Nette Framework">Nette Framework</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Phalcon_%28framework%29" title="Phalcon (framework)">Phalcon</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PRADO_%28framework%29" title="PRADO (framework)">PRADO</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Qcodo" title="Qcodo">Qcodo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Seagull_PHP_Framework" title="Seagull PHP Framework">Seagull</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SilverStripe" title="SilverStripe">SilverStripe</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Symfony" title="Symfony">Symfony</a></li>
+<li><a href="http://en.wikipedia.org/wiki/TYPO3" title="TYPO3">TYPO3</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WordPress" title="WordPress">WordPress</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Xaraya" title="Xaraya">Xaraya</a></li>
+<li><a href="http://en.wikipedia.org/wiki/XOOPS" title="XOOPS">XOOPS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Yii" title="Yii">Yii</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Zend_Framework" title="Zend Framework">Zend Framework</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Python_%28programming_language%29" title="Python (programming language)">Python</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Zope#BlueBream" title="Zope">BlueBream</a></li>
+<li><a href="http://en.wikipedia.org/wiki/CherryPy" title="CherryPy">CherryPy</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Django_%28web_framework%29" title="Django (web framework)">Django</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Flask_%28programming%29" title="Flask (programming)" class="mw-redirect">Flask</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Grok_%28web_framework%29" title="Grok (web framework)">Grok</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Nevow" title="Nevow">Nevow</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pyjamas_%28software%29" title="Pyjamas (software)">Pyjamas</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pylons_project#Pylons_Framework" title="Pylons project">Pylons</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pylons_project#Pyramid" title="Pylons project">Pyramid</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Quixote_%28web_framework%29" title="Quixote (web framework)">Quixote</a></li>
+<li><a href="http://en.wikipedia.org/wiki/TACTIC_%28web_framework%29" title="TACTIC (web framework)">TACTIC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tornado_%28web_server%29" title="Tornado (web server)">Tornado</a></li>
+<li><a href="http://en.wikipedia.org/wiki/TurboGears" title="TurboGears">TurboGears</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Web2py" title="Web2py">web2py</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Webware_for_Python" title="Webware for Python">Webware</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Zope#Zope_2" title="Zope">Zope 2</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Ruby_%28programming_language%29" title="Ruby (programming language)">Ruby</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Camping_%28microframework%29" title="Camping (microframework)">Camping</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Hobo_%28software%29" title="Hobo (software)">Hobo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Merb" title="Merb">Merb</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Padrino_%28web_framework%29" title="Padrino (web framework)">Padrino</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ramaze" title="Ramaze">Ramaze</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ruby_on_Rails" title="Ruby on Rails">Ruby on Rails</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Sinatra_%28software%29" title="Sinatra (software)">Sinatra</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Scala_%28programming_language%29" title="Scala (programming language)">Scala</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Lift_%28web_framework%29" title="Lift (web framework)">Lift</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Play_Framework" title="Play Framework" class="mw-redirect">Play</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Scalatra" title="Scalatra">Scalatra</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group"><a href="http://en.wikipedia.org/wiki/Smalltalk" title="Smalltalk">Smalltalk</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/AIDA/Web" title="AIDA/Web">AIDA/Web</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Seaside_%28software%29" title="Seaside (software)">Seaside</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group">Other languages</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Oracle_Application_Express" title="Oracle Application Express">Application Express</a> (<a href="http://en.wikipedia.org/wiki/PL/SQL" title="PL/SQL">PL/SQL</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Grails_%28framework%29" title="Grails (framework)">Grails</a> (<a href="http://en.wikipedia.org/wiki/Groovy_%28programming_language%29" title="Groovy (programming language)">Groovy</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Kepler_%28software%29" title="Kepler (software)">Kepler</a> (<a href="http://en.wikipedia.org/wiki/Lua_%28programming_language%29" title="Lua (programming language)">Lua</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/OpenACS" title="OpenACS">OpenACS</a> (<a href="http://en.wikipedia.org/wiki/Tcl" title="Tcl">Tcl</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/SproutCore" title="SproutCore">SproutCore</a> (<a href="http://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a>/<a href="http://en.wikipedia.org/wiki/Ruby_%28programming_language%29" title="Ruby (programming language)">Ruby</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/SymbolicWeb" title="SymbolicWeb">SymbolicWeb</a> (<a href="http://en.wikipedia.org/wiki/Clojure" title="Clojure">Clojure</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Yaws_%28web_server%29" title="Yaws (web server)">Yaws</a> (<a href="http://en.wikipedia.org/wiki/Erlang_%28programming_language%29" title="Erlang (programming language)">Erlang</a>)</li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<table class="navbox" style="border-spacing:0;" cellspacing="0">
+<tbody><tr>
+<td style="padding:2px;">
+<table id="collapsibleTable2" class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit;" cellspacing="0">
+<tbody><tr>
+<th scope="col" class="navbox-title" colspan="2"><span class="collapseButton">[<a href="#" id="collapseButton2">show</a>]</span>
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="http://en.wikipedia.org/wiki/Template:Widget_toolkits" title="Template:Widget toolkits"><span title="View this template" style=";;background:none transparent;border:none;;">v</span></a></li>
+<li class="nv-talk"><a href="http://en.wikipedia.org/wiki/Template_talk:Widget_toolkits" title="Template talk:Widget toolkits"><span title="Discuss this template" style=";;background:none transparent;border:none;;">t</span></a></li>
+<li class="nv-edit"><a class="external text" href="http://en.wikipedia.org/w/index.php?title=Template:Widget_toolkits&amp;action=edit"><span title="Edit this template" style=";;background:none transparent;border:none;;">e</span></a></li>
+</ul>
+</div>
+<div style="font-size:110%;"><a href="http://en.wikipedia.org/wiki/List_of_widget_toolkits" title="List of widget toolkits">List</a> of <a href="http://en.wikipedia.org/wiki/Widget_toolkit" title="Widget toolkit">widget toolkits</a></div>
+</th>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group">Low-level</th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Macintosh_Toolbox" title="Macintosh Toolbox">Macintosh Toolbox</a>/<a href="http://en.wikipedia.org/wiki/Carbon_%28API%29" title="Carbon (API)">Carbon</a></li>
+<li><a href="http://en.wikipedia.org/wiki/X_Toolkit_Intrinsics" title="X Toolkit Intrinsics">Intrinsics</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Intuition_%28Amiga%29" title="Intuition (Amiga)">Intuition</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_API" title="Windows API">Windows API</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Xlib" title="Xlib">Xlib</a></li>
+<li><a href="http://en.wikipedia.org/wiki/XCB" title="XCB">XCB</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height: 2px; display: none;">
+<td colspan="2"></td>
+</tr>
+<tr style="display: none;">
+<th scope="row" class="navbox-group">High-level</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0;" cellspacing="0">
+<tbody><tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;">On <a href="http://en.wikipedia.org/wiki/AmigaOS" title="AmigaOS">AmigaOS</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/BOOPSI" title="BOOPSI">BOOPSI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Magic_User_Interface" title="Magic User Interface">MUI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/ReAction_GUI" title="ReAction GUI">ReAction GUI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Zune_%28widget_toolkit%29" title="Zune (widget toolkit)">Zune</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;">On <a href="http://en.wikipedia.org/wiki/Mac_OS" title="Mac OS">Mac OS</a><br>
+and <a href="http://en.wikipedia.org/wiki/OS_X" title="OS X">OS X</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Carbon_%28API%29" title="Carbon (API)">Carbon</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Cocoa_%28API%29" title="Cocoa (API)">Cocoa</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MacApp" title="MacApp">MacApp</a></li>
+<li><a href="http://en.wikipedia.org/wiki/MacZoop" title="MacZoop">MacZoop</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PowerPlant" title="PowerPlant">PowerPlant</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;">On <a href="http://en.wikipedia.org/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Microsoft_Foundation_Class_Library" title="Microsoft Foundation Class Library">MFC</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Object_Windows_Library" title="Object Windows Library">OWL</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Microsoft_Silverlight" title="Microsoft Silverlight">Silverlight</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SmartWin%2B%2B" title="SmartWin++">SmartWin++</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Visual_Component_Library" title="Visual Component Library">VCL</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Forms" title="Windows Forms">Windows Forms</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Presentation_Foundation" title="Windows Presentation Foundation">WPF</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Template_Library" title="Windows Template Library">WTL</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Windows_Runtime_XAML_Framework" title="Windows Runtime XAML Framework">WinRT XAML</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;">On Unix,<br>
+under <a href="http://en.wikipedia.org/wiki/X_Window_System" title="X Window System">X11</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/X_Athena_Widgets" title="X Athena Widgets">Athena (Xaw)</a></li>
+<li><a href="http://en.wikipedia.org/wiki/InterViews" title="InterViews">InterViews</a></li>
+<li><a href="http://en.wikipedia.org/wiki/LessTif" title="LessTif">LessTif</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Motif_%28software%29" title="Motif (software)">Motif</a></li>
+<li><a href="http://en.wikipedia.org/wiki/OPEN_LOOK" title="OPEN LOOK">OPEN LOOK</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Cross-platform" title="Cross-platform">Cross-platform</a>,<br>
+by language</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0;" cellspacing="0">
+<tbody><tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Common_Language_Infrastructure" title="Common Language Infrastructure">CLI</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Gtk_Sharp" title="Gtk Sharp">Gtk#</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Moonlight_%28runtime%29" title="Moonlight (runtime)">Moonlight</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tao_Framework" title="Tao Framework">Tao</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/C_%28programming_language%29" title="C (programming language)">C</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/GTK%2B" title="GTK+">GTK+</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IUP_%28software%29" title="IUP (software)">IUP</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tk_%28software%29" title="Tk (software)">Tk</a></li>
+<li><a href="http://en.wikipedia.org/wiki/XForms_%28toolkit%29" title="XForms (toolkit)">XForms</a></li>
+<li><a href="http://en.wikipedia.org/wiki/XVT" title="XVT">XVT</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Objective-C" title="Objective-C">Objective-C</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/GNUstep" title="GNUstep">GNUstep</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/C%2B%2B" title="C++">C++</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/CEGUI" title="CEGUI">CEGUI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Component_Library_for_Cross_Platform" title="Component Library for Cross Platform">CLX</a></li>
+<li><a href="http://en.wikipedia.org/wiki/FLTK" title="FLTK">FLTK</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fox_toolkit" title="Fox toolkit">FOX toolkit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/OpenGL_User_Interface_Library" title="OpenGL User Interface Library">GLUI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Gtkmm" title="Gtkmm">Gtkmm</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Juce" title="Juce" class="mw-redirect">Juce</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Qt_%28software%29" title="Qt (software)">Qt</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Wt_%28web_toolkit%29" title="Wt (web toolkit)">Wt</a></li>
+<li><a href="http://en.wikipedia.org/wiki/TnFOX" title="TnFOX">TnFOX</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ultimate%2B%2B" title="Ultimate++">Ultimate++</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Visual_Component_Framework" title="Visual Component Framework">VCF</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WxWidgets" title="WxWidgets">wxWidgets</a></li>
+<li><a href="http://en.wikipedia.org/wiki/YAAF" title="YAAF">YAAF</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Adobe_Flash" title="Adobe Flash">Flash</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Apache_Flex" title="Apache Flex">Apache Flex</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Java_%28programming_language%29" title="Java (programming language)">Java</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;"></div>
+<table class="nowraplinks navbox-subgroup" style="border-spacing:0;" cellspacing="0">
+<tbody><tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;">desktop</div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Abstract_Window_Toolkit" title="Abstract Window Toolkit">AWT</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Swing_%28Java%29" title="Swing (Java)">Swing</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Standard_Widget_Toolkit" title="Standard Widget Toolkit">SWT</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Qt_Jambi" title="Qt Jambi">Qt Jambi</a></li>
+<li><a href="http://en.wikipedia.org/wiki/FXML" title="FXML">FXML</a> (<a href="http://en.wikipedia.org/wiki/JavaFX" title="JavaFX">JavaFX</a>)</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;">web</div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Google_Web_Toolkit" title="Google Web Toolkit">GWT</a></li>
+<li><a href="http://en.wikipedia.org/wiki/FXML" title="FXML">FXML</a> (<a href="http://en.wikipedia.org/wiki/JavaFX" title="JavaFX">JavaFX</a>)</li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/JavaScript" title="JavaScript">JavaScript</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Dojo_Toolkit" title="Dojo Toolkit">Dojo Toolkit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Echo_%28framework%29" title="Echo (framework)">Echo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Ext_JS" title="Ext JS">Ext JS</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Google_Closure_Tools" title="Google Closure Tools">Google Closure</a></li>
+<li><a href="http://en.wikipedia.org/wiki/JQuery_UI" title="JQuery UI">jQuery UI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Qooxdoo" title="Qooxdoo">Qooxdoo</a></li>
+<li><a href="http://en.wikipedia.org/wiki/YUI_Library" title="YUI Library">YUI</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/LispWorks" title="LispWorks">CAPI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Allegro_Common_Lisp" title="Allegro Common Lisp">Common Graphics</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Common_Lisp_Interface_Manager" title="Common Lisp Interface Manager">CLIM</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tk_%28framework%29" title="Tk (framework)" class="mw-redirect">Ltk</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Common_Lisp_Interface_Manager" title="Common Lisp Interface Manager">McCLIM</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Pascal_%28programming_language%29" title="Pascal (programming language)">Pascal</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Lazarus_Component_Library" title="Lazarus Component Library">LCL</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Object_Pascal" title="Object Pascal">Object Pascal</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Component_Library_for_Cross_Platform" title="Component Library for Cross Platform">CLX</a></li>
+<li><a href="http://en.wikipedia.org/wiki/FpGUI" title="FpGUI">fpGUI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/IP_Pascal" title="IP Pascal">IP Pascal</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lazarus_Component_Library" title="Lazarus Component Library">LCL</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Perl" title="Perl">Perl</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/WxPerl" title="WxPerl">WxPerl</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tk_%28framework%29" title="Tk (framework)" class="mw-redirect">Perl/Tk</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/PHP" title="PHP">PHP</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/PHP-GTK" title="PHP-GTK">PHP-GTK</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PHP-Qt" title="PHP-Qt">PHP-Qt</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WxPHP" title="WxPHP">WxPHP</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Python_%28programming_language%29" title="Python (programming language)">Python</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Pyjamas_%28software%29" title="Pyjamas (software)">Pyjamas</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PyQt" title="PyQt">PyQt</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PyGTK" title="PyGTK">PyGTK</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PyGObject" title="PyGObject" class="mw-redirect">PyGObject</a></li>
+<li><a href="http://en.wikipedia.org/wiki/PySide" title="PySide">PySide</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Tkinter" title="Tkinter">Tkinter</a></li>
+<li><a href="http://en.wikipedia.org/wiki/WxPython" title="WxPython">wxPython</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/Ruby_%28programming_language%29" title="Ruby (programming language)">Ruby</a></div>
+</th>
+<td class="navbox-list navbox-even" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Shoes_%28GUI_toolkit%29" title="Shoes (GUI toolkit)">Shoes</a></li>
+<li><a href="http://en.wikipedia.org/wiki/QtRuby" title="QtRuby">QtRuby</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px;">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group" style="padding-left:0em;padding-right:0em;;">
+<div style="padding:0em 0.75em;"><a href="http://en.wikipedia.org/wiki/XML" title="XML">XML</a></div>
+</th>
+<td class="navbox-list navbox-odd" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;">
+<div style="padding:0em 0.25em;">
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Ample_SDK" title="Ample SDK">Ample SDK</a></li>
+<li><a href="http://en.wikipedia.org/wiki/CougarXML" title="CougarXML">CougarXML</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Glade_Interface_Designer" title="Glade Interface Designer">GladeXML</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Lively_Kernel" title="Lively Kernel">Lively Kernel</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pyjamas_%28software%29" title="Pyjamas (software)">Pyjamas</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Rialto_Toolkit" title="Rialto Toolkit">Rialto Toolkit</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Extensible_Application_Markup_Language" title="Extensible Application Markup Language">XAML</a></li>
+<li><a href="http://en.wikipedia.org/wiki/XML_User_Interface" title="XML User Interface">XUI</a></li>
+<li><a href="http://en.wikipedia.org/wiki/XUL" title="XUL">XUL</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Wt_%28web_toolkit%29" title="Wt (web toolkit)">Wt</a></li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1107
+CPU time usage: 1.868 seconds
+Real time usage: 1.962 seconds
+Preprocessor visited node count: 5511/1000000
+Preprocessor generated node count: 13268/1500000
+Post‐expand include size: 196089/2048000 bytes
+Template argument size: 14776/2048000 bytes
+Highest expansion depth: 18/40
+Expensive parser function count: 7/500
+Lua time usage: 0.165/10.000 seconds
+Lua memory usage: 3.15 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:7672626-0!*!0!!en!4!* and timestamp 20140728182417 and revision id 617387086
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>									<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;oldid=617387086">http://en.wikipedia.org/w/index.php?title=JQuery&amp;oldid=617387086</a>"					</div>
+													<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:JavaScript_libraries" title="Category:JavaScript libraries">JavaScript libraries</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Free_software_programmed_in_JavaScript" title="Category:Free software programmed in JavaScript">Free software programmed in JavaScript</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Ajax_%28programming%29" title="Category:Ajax (programming)">Ajax (programming)</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Software_using_the_MIT_license" title="Category:Software using the MIT license">Software using the MIT license</a></li><li><a href="http://en.wikipedia.org/wiki/Category:2006_software" title="Category:2006 software">2006 software</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Commons_category_with_local_link_same_as_on_Wikidata" title="Category:Commons category with local link same as on Wikidata">Commons category with local link same as on Wikidata</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=JQuery&amp;type=signup">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=JQuery" title="You're encouraged to log in; however, it's not mandatory. [Alt+Shift+o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li id="ca-nstab-main" class="selected"><span><a href="http://en.wikipedia.org/wiki/JQuery" title="View the content page [Alt+Shift+c]" accesskey="c">Article</a></span></li>
+															<li id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:JQuery" title="Discussion about the content page [Alt+Shift+t]" accesskey="t">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 tabindex="0" id="p-variants-label"><span style="display: block;">Variants</span><a tabindex="-1" href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="http://en.wikipedia.org/wiki/JQuery">Read</a></span></li>
+															<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=edit" title="You can edit this page. Please use the preview button before saving [Alt+Shift+e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=history" title="Past versions of this page [Alt+Shift+h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div style="" id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 tabindex="0" id="p-cactions-label"><span>More</span><a tabindex="-1" href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+														<div id="simpleSearch">
+															<input autocomplete="off" tabindex="1" name="search" placeholder="Search" title="Search Wikipedia [Alt+Shift+f]" accesskey="f" id="searchInput" type="search"><input value="Special:Search" name="title" type="hidden"><input name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" type="submit">								</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a style="background-image: url(//upload.wikimedia.org/wikipedia/en/b/bc/Wiki.png);" href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page"></a></div>
+						<div class="portal first" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+
+			<div class="body">
+									<ul>
+													<li id="n-mainpage-description"><a href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [Alt+Shift+z]" accesskey="z">Main page</a></li>
+													<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+													<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+													<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+													<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [Alt+Shift+x]" accesskey="x">Random article</a></li>
+													<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+													<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-interaction" aria-labelledby="p-interaction-label">
+			<h3 id="p-interaction-label">Interaction</h3>
+
+			<div class="body">
+									<ul>
+													<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+													<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+													<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+													<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [Alt+Shift+r]" accesskey="r">Recent changes</a></li>
+													<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+
+			<div class="body">
+									<ul>
+													<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/JQuery" title="List of all English Wikipedia pages containing links to this page [Alt+Shift+j]" accesskey="j">What links here</a></li>
+													<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/JQuery" title="Recent changes in pages linked from this page [Alt+Shift+k]" accesskey="k">Related changes</a></li>
+													<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [Alt+Shift+u]" accesskey="u">Upload file</a></li>
+													<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [Alt+Shift+q]" accesskey="q">Special pages</a></li>
+													<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;oldid=617387086" title="Permanent link to this revision of the page">Permanent link</a></li>
+													<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;action=info">Page information</a></li>
+													<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q230036" title="Link to connected data repository item [Alt+Shift+g]" accesskey="g">Wikidata item</a></li>
+						<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:Cite&amp;page=JQuery&amp;id=617387086" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+			<h3 id="p-coll-print_export-label">Print/export</h3>
+
+			<div class="body">
+									<ul>
+													<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=JQuery">Create a book</a></li>
+													<li id="coll-download-as-rl"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=JQuery&amp;oldid=617387086&amp;writer=rl">Download as PDF</a></li>
+													<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=JQuery&amp;printable=yes" title="Printable version of this page [Alt+Shift+p]" accesskey="p">Printable version</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label"><span original-title="Language settings" aria-haspopup="true" role="button" tabindex="0" class="uls-settings-trigger"></span>
+			<h3 id="p-lang-label">Languages</h3>
+
+			<div class="body">
+									<ul>
+													<li class="interlanguage-link interwiki-af"><a href="http://af.wikipedia.org/wiki/JQuery" title="JQuery – Afrikaans" hreflang="af" lang="af">Afrikaans</a></li>
+													<li class="interlanguage-link interwiki-ar"><a href="http://ar.wikipedia.org/wiki/%D8%AC%D9%8A_%D9%83%D9%88%D9%8A%D8%B1%D9%8A" title="جي كويري – Arabic" hreflang="ar" lang="ar">العربية</a></li>
+													<li class="interlanguage-link interwiki-az"><a href="http://az.wikipedia.org/wiki/JQuery" title="JQuery – Azerbaijani" hreflang="az" lang="az">Azərbaycanca</a></li>
+													<li class="interlanguage-link interwiki-be"><a href="http://be.wikipedia.org/wiki/JQuery" title="JQuery – Belarusian" hreflang="be" lang="be">Беларуская</a></li>
+													<li class="interlanguage-link interwiki-be-x-old"><a href="http://be-x-old.wikipedia.org/wiki/JQuery" title="JQuery – беларуская (тарашкевіца)‎" hreflang="be-x-old" lang="be-x-old">Беларуская (тарашкевіца)‎</a></li>
+													<li class="interlanguage-link interwiki-bg"><a href="http://bg.wikipedia.org/wiki/JQuery" title="JQuery – Bulgarian" hreflang="bg" lang="bg">Български</a></li>
+													<li class="interlanguage-link interwiki-ca"><a href="http://ca.wikipedia.org/wiki/JQuery" title="JQuery – Catalan" hreflang="ca" lang="ca">Català</a></li>
+													<li class="interlanguage-link interwiki-cs"><a href="http://cs.wikipedia.org/wiki/JQuery" title="JQuery – Czech" hreflang="cs" lang="cs">Čeština</a></li>
+													<li class="interlanguage-link interwiki-da"><a href="http://da.wikipedia.org/wiki/JQuery" title="JQuery – Danish" hreflang="da" lang="da">Dansk</a></li>
+													<li class="interlanguage-link interwiki-de"><a href="http://de.wikipedia.org/wiki/JQuery" title="JQuery – German" hreflang="de" lang="de">Deutsch</a></li>
+													<li class="interlanguage-link interwiki-el"><a href="http://el.wikipedia.org/wiki/JQuery" title="JQuery – Greek" hreflang="el" lang="el">Ελληνικά</a></li>
+													<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/JQuery" title="JQuery – Spanish" hreflang="es" lang="es">Español</a></li>
+													<li class="interlanguage-link interwiki-eu"><a href="http://eu.wikipedia.org/wiki/Jquery" title="Jquery – Basque" hreflang="eu" lang="eu">Euskara</a></li>
+													<li class="interlanguage-link interwiki-fa"><a href="http://fa.wikipedia.org/wiki/%D8%AC%DB%8C%E2%80%8C%DA%A9%D9%88%D8%A6%D8%B1%DB%8C" title="جی‌کوئری – Persian" hreflang="fa" lang="fa">فارسی</a></li>
+													<li class="interlanguage-link interwiki-fr"><a href="http://fr.wikipedia.org/wiki/JQuery" title="JQuery – French" hreflang="fr" lang="fr">Français</a></li>
+													<li class="interlanguage-link interwiki-ko"><a href="http://ko.wikipedia.org/wiki/JQuery" title="JQuery – Korean" hreflang="ko" lang="ko">한국어</a></li>
+													<li class="interlanguage-link interwiki-hy"><a href="http://hy.wikipedia.org/wiki/JQuery" title="JQuery – Armenian" hreflang="hy" lang="hy">Հայերեն</a></li>
+													<li class="interlanguage-link interwiki-id"><a href="http://id.wikipedia.org/wiki/JQuery" title="JQuery – Indonesian" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+													<li class="interlanguage-link interwiki-it"><a href="http://it.wikipedia.org/wiki/JQuery" title="JQuery – Italian" hreflang="it" lang="it">Italiano</a></li>
+													<li class="interlanguage-link interwiki-he"><a href="http://he.wikipedia.org/wiki/JQuery" title="JQuery – Hebrew" hreflang="he" lang="he">עברית</a></li>
+													<li class="interlanguage-link interwiki-ka"><a href="http://ka.wikipedia.org/wiki/JQuery" title="JQuery – Georgian" hreflang="ka" lang="ka">ქართული</a></li>
+													<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/JQuery" title="JQuery – Hungarian" hreflang="hu" lang="hu">Magyar</a></li>
+													<li class="interlanguage-link interwiki-ml"><a href="http://ml.wikipedia.org/wiki/%E0%B4%9C%E0%B5%86%E0%B4%95%E0%B5%8D%E0%B4%B5%E0%B4%B1%E0%B4%BF" title="ജെക്വറി – Malayalam" hreflang="ml" lang="ml">മലയാളം</a></li>
+													<li class="interlanguage-link interwiki-mr"><a href="http://mr.wikipedia.org/wiki/%E0%A4%9C%E0%A5%87-%E0%A4%95%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%B0%E0%A5%80" title="जे-क्वेरी – Marathi" hreflang="mr" lang="mr">मराठी</a></li>
+													<li class="interlanguage-link interwiki-mn"><a href="http://mn.wikipedia.org/wiki/JQuery" title="JQuery – Mongolian" hreflang="mn" lang="mn">Монгол</a></li>
+													<li class="interlanguage-link interwiki-nl"><a href="http://nl.wikipedia.org/wiki/JQuery" title="JQuery – Dutch" hreflang="nl" lang="nl">Nederlands</a></li>
+													<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/JQuery" title="JQuery – Japanese" hreflang="ja" lang="ja">日本語</a></li>
+													<li class="interlanguage-link interwiki-no"><a href="http://no.wikipedia.org/wiki/JQuery" title="JQuery – Norwegian (bokmål)" hreflang="no" lang="no">Norsk bokmål</a></li>
+													<li class="interlanguage-link interwiki-km"><a href="http://km.wikipedia.org/wiki/%E1%9E%87%E1%9F%81%E1%9E%83%E1%9F%92%E1%9E%9C%E1%9E%B8%E1%9E%9A%E1%9E%B8" title="ជេឃ្វីរី – Khmer" hreflang="km" lang="km">ភាសាខ្មែរ</a></li>
+													<li class="interlanguage-link interwiki-pl"><a href="http://pl.wikipedia.org/wiki/JQuery" title="JQuery – Polish" hreflang="pl" lang="pl">Polski</a></li>
+													<li class="interlanguage-link interwiki-pt"><a href="http://pt.wikipedia.org/wiki/JQuery" title="JQuery – Portuguese" hreflang="pt" lang="pt">Português</a></li>
+													<li class="interlanguage-link interwiki-ro"><a href="http://ro.wikipedia.org/wiki/JQuery" title="JQuery – Romanian" hreflang="ro" lang="ro">Română</a></li>
+													<li class="interlanguage-link interwiki-ru"><a href="http://ru.wikipedia.org/wiki/JQuery" title="JQuery – Russian" hreflang="ru" lang="ru">Русский</a></li>
+													<li class="interlanguage-link interwiki-simple"><a href="http://simple.wikipedia.org/wiki/JQuery" title="JQuery – Simple English" hreflang="simple" lang="simple">Simple English</a></li>
+													<li class="interlanguage-link interwiki-sk"><a href="http://sk.wikipedia.org/wiki/JQuery" title="JQuery – Slovak" hreflang="sk" lang="sk">Slovenčina</a></li>
+													<li class="interlanguage-link interwiki-fi"><a href="http://fi.wikipedia.org/wiki/JQuery" title="JQuery – Finnish" hreflang="fi" lang="fi">Suomi</a></li>
+													<li class="interlanguage-link interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Jquery" title="Jquery – Swedish" hreflang="sv" lang="sv">Svenska</a></li>
+													<li class="interlanguage-link interwiki-ta"><a href="http://ta.wikipedia.org/wiki/%E0%AE%9C%E0%AF%86%E0%AE%95%E0%AF%81%E0%AE%B5%E0%AF%86%E0%AE%B0%E0%AE%BF" title="ஜெகுவெரி – Tamil" hreflang="ta" lang="ta">தமிழ்</a></li>
+													<li class="interlanguage-link interwiki-th"><a href="http://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%88%E0%B9%80%E0%B8%84%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%A3%E0%B8%B5" title="เจเควียรี – Thai" hreflang="th" lang="th">ไทย</a></li>
+													<li class="interlanguage-link interwiki-tr"><a href="http://tr.wikipedia.org/wiki/JQuery" title="JQuery – Turkish" hreflang="tr" lang="tr">Türkçe</a></li>
+													<li class="interlanguage-link interwiki-uk"><a href="http://uk.wikipedia.org/wiki/JQuery" title="JQuery – Ukrainian" hreflang="uk" lang="uk">Українська</a></li>
+													<li class="interlanguage-link interwiki-vi"><a href="http://vi.wikipedia.org/wiki/JQuery" title="JQuery – Vietnamese" hreflang="vi" lang="vi">Tiếng Việt</a></li>
+													<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/JQuery" title="JQuery – Chinese" hreflang="zh" lang="zh">中文</a></li>
+													
+											</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a action="edit" href="http://www.wikidata.org/wiki/Q230036#sitelinks-wikipedia" text="Edit links" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 17 July 2014 at 23:42.<br></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/wiki/JQuery" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+															<a href="http://wikimediafoundation.org/"><img src="images/wikimedia-button.png" alt="Wikimedia Foundation" height="31" width="88"></a>
+													</li>
+											<li id="footer-poweredbyico">
+															<a href="http://www.mediawiki.org/"><img src="images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" height="31" width="88"></a>
+													</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>/*<![CDATA[*/window.jQuery && jQuery.ready();/*]]>*/</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["ext.cite","mediawiki.toc","mobile.desktop","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","mmv.bootstrap.autostart","ext.eventLogging.subscriber","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage"],null,true);
+}</script>
+<script src="images/load_002.php"></script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":435,"wgHostname":"mw1072"});
+}</script>
+	
+
+	<div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>
